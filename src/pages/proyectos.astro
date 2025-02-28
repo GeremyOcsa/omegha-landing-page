@@ -1,0 +1,40 @@
+---
+import Card from "@components/Card.astro";
+import projects from "@contents/projects.json";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Proyectos">
+  <section class="bg-hero bg-fixed bg-center bg-no-repeat">
+    <div class="max-w-5xl mx-auto min-h-screen py-4">
+      <div class="rounded-2xl bg-white-general bg-opacity-60 p-5">
+        <div class="prose max-w-none text-black pb-8">
+          <h1 class="pl-5 uppercase">Proyectos</h1>
+          <p>
+            Contamos con un equipo de colaboradores profesionales, tecnología
+            apropiada, maquinaria, equipo y la organización necesaria para
+            realizar de manera eficiente obras de diversa envergadura. Nuestros
+            diseños e ingeniería de vanguardia enfocados en la máxima calidad,
+            siempre cuidando el medio ambiente y evitando los sobre costos, son
+            las cualidades que incrementan el valor agregado de nuestros
+            proyectos.
+          </p>
+          <p>Algunos de nuestros proyectos más destacados:</p>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          {
+            projects.map((project) => (
+              <Card
+                key={project.id}
+                title={project.name}
+                description={project.description}
+                image={project.image}
+                position="justify-end"
+              />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

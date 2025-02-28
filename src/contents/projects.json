@@ -1,0 +1,96 @@
+[
+  {
+    "id": 1,
+    "name": "Obra Demolición",
+    "image": "/proyectos/proyectos001.jpg",
+    "description": "Obra “Demolición del hospital regional, Construcción del nuevo Hospital II-2 en Tarapoto incluido hospital de Contingencia en la Banda de Shilcayo - San Martin - Perú”"
+  },
+  {
+    "id": 2,
+    "name": "El Embrujo",
+    "image": "/proyectos/proyectos002.jpg",
+    "description": "Proyecto “El Embrujo, Diseño de Centro Comercial y Urbanización en 17 hectáreas de terreno”"
+  },
+  {
+    "id": 3,
+    "name": "Obra Mejoramiento",
+    "image": "/proyectos/proyectos003.jpg",
+    "description": "Obra “Mejoramiento y Ampliación del Sistema de Agua Potable y Alcantarillado de la Ciudad de Rioja - San Martin - Perú”"
+  },
+  {
+    "id": 4,
+    "name": "Consultoría",
+    "image": "/proyectos/proyectos004.jpeg",
+    "description": "Consultoría “Proyecto de Ingeniería de Detalle (PID) correspondiente a los Tramos Viales Nº 01 y 04 del Eje Multimodal del Amazonas Norte” - IIRSA Norte - Perú"
+  },
+  {
+    "id": 5,
+    "name": "Condominio Diosostenible Yori",
+    "image": "/proyectos/proyectos005.jpg",
+    "description": "Diseño y Construcción del “Condominio Biosostenible Yori - San Martin - Perú”"
+  },
+  {
+    "id": 6,
+    "name": "Consultoría",
+    "image": "/proyectos/proyectos006.jpg",
+    "description": "Consultoría “Saldo de obra Mejoramiento del Camino Vecinal Buenos Aires - Santa Catalina (acceso al Puente Motilones) - Flor del Mayo, Margen Izquierda del Río Mayo, Moyobamba - San Martín - Perú”"
+  },
+  {
+    "id": 7,
+    "name": "Discoteca",
+    "image": "/proyectos/proyectos007.jpg",
+    "description": "Diseño y Construcción de Discoteca en la Ciudad de Iquitos - Región Loreto - Perú, de 02 plantas"
+  },
+    {
+    "id": 8,
+    "name": "Prueba de Tecnología",
+    "image": "/proyectos/proyectos008.jpeg",
+    "description": "Servicio “Prueba de Tecnología de Caminos con R-SOIL en cabecera del Hangar de Palmas del Espino - Santa Lucia - Tocache - Perú”"
+  },
+  {
+    "id": 9,
+    "name": "Obra Mejoramiento",
+    "image": "/proyectos/proyectos009.jpg",
+    "description": "“Mejoramiento de los Servicios de Salud del Hospital II-2 Cesar Garayar García, Iquitos - Maynas- Loreto - Perú.”"
+  },
+    {
+    "id": 10,
+    "name": "Proyecto de Ingeniería",
+    "image": "/proyectos/Proyectos010.png",
+    "description": "“Proyecto de Ingeniería de Detalle del Nuevo Peaje de Santa en la Red Vial 4: Pativilca - Trujillo - Perú”"
+  },
+    {
+    "id": 11,
+    "name": "Conjunto Residencial Suchiche",
+    "image": "/proyectos/proyectos011.jpg",
+    "description": "Proyecto “Conjunto Residencial Suchiche”, de 04 plantas en la Ciudad de Tarapoto - San Martin - Perú"
+  },
+    {
+    "id": 12,
+    "name": "Proyecto integrado del Sistema de Agua Potable",
+    "image": "/proyectos/proyectos012.jpg",
+    "description": "“Proyecto integrado del Sistema de Agua Potable y Alcantarillado de la Localidad de Bagua - Amazonas - Perú”"
+  },
+    {
+    "id": 13,
+    "name": "Proyecto Residencial",
+    "image": "/proyectos/proyectos013.jpg",
+    "description": "“Proyecto Residencial, complejo construido sobre un terreno de 2,800 m2 aprox.”"
+  },
+    {
+    "id": 14,
+    "name": "Mausoleo Familiar",
+    "image": "/proyectos/proyectos014.JPG",
+    "description": "“Diseño y Obra de Mausoleo familiar en Tingo de Saposoa - San Martin - Perú”"
+  }
+
+
+
+
+
+
+
+
+
+
+]

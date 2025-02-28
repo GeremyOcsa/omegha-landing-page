@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const images = [
+  "/inicio001.jpg",
+  "/inicio002.jpg",
+  "/inicio003.jpg",
+  "/inicio004.jpg",
+  "/inicio005.jpg",
+];
+---
+
+<Layout title="Inicio">
+  <section class="bg-hero bg-fixed bg-cover bg-center bg-no-repeat">
+    <div class="max-w-5xl mx-auto min-h-screen py-4">
+      <article
+        class="prose max-w-none rounded-2xl bg-white-general bg-opacity-60 p-5 text-black"
+      >
+        <h1 class="pl-5 uppercase">Sean Bienvenidos</h1>
+        <div class="flex flex-row justify-center">
+          <div class="text-black mt-4 text-justify w-1/2">
+            <p class="pr-20">
+              En <span class="font-bold"
+                >OMEGHA CONSTRUCTOR'S BUILDING Co. S.A.C.</span
+              > nos distinguimos por la calidad de la mano de obra e insumos utilizados
+              en cada una de nuestras obras, lo que nos permite garantizar una entrega
+              puntual y elevados estándares de calidad, a un precio justo.
+            </p>
+            <p class="pr-20">
+              Destacamos también por la búsqueda constante de nuevas e
+              innovadoras soluciones de ingeniería y diseño arquitectónico,
+              ecológicas y amigables con el medio ambiente, rompiendo todos los
+              estándares establecidos.
+            </p>
+          </div>
+          <div
+            x-data="{ current: 0, images: [
+            '/inicio001.jpg',
+            '/inicio002.jpg',
+            '/inicio003.jpg',
+            '/inicio004.jpg',
+            '/inicio005.jpg',
+            ],next() { this.current = (this.current + 1) % this.images.length; } }"
+            x-init="setInterval(() => next(), 6000)"
+          >
+            <!-- Slides -->
+            <div class="relative pr-3">
+              <template x-for="(image, index) in images" :key="index">
+                <img
+                  :src="`/inicio/${image}`"
+                  class="rounded-2xl border-2 border-gray-900 max-w-md h-72"
+                  :class="index === current ? 'opacity-100' : 'opacity-0 absolute'"
+                />
+              </template>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</Layout>
