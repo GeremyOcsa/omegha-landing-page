@@ -1,48 +1,40 @@
-# Astro Starter Kit: Basics
+# Landing de MEGHA CONSTRUCTOR'S BUILDING
 
-```sh
-pnpm create astro@latest -- --template basics
+Bienvenido a la landing page de MEGHA CONSTRUCTOR'S BUILDING, una empresa dedicada a la construcción y desarrollo de proyectos arquitectónicos con altos estándares de calidad e innovación.
+
+En esta plataforma, encontrarás información detallada sobre nuestros servicios, proyectos destacados y el compromiso que tenemos con la excelencia en cada obra. Nuestro equipo de profesionales trabaja para brindar soluciones eficientes y sostenibles, asegurando resultados que superen las expectativas de nuestros clientes.
+
+Explora nuestra página y descubre cómo MEGHA CONSTRUCTOR'S BUILDING puede hacer realidad tus proyectos con solidez y confianza. 🚀🏗️
+
+## Tech Stack
+
+![ASTRO](https://img.shields.io/badge/astro-%23E34F26.svg?style=for-the-badge&logo=astro&logoColor=white)
+
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
+
+## Correr Localmente
+
+Clona el proyecto
+
+```bash
+git clone https://github.com/GeremyOcsa/omegha-landing-page.git
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Dirigete al directorio del proyecto
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+cd omegha-landing-page
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Instala las dependencias
 
-## 🧞 Commands
+```bash
+pnpm install
+```
 
-All commands are run from the root of the project, from a terminal:
+Inicia el servidor
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+pnpm run dev
