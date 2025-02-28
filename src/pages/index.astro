@@ -48,7 +48,7 @@ const images = [
               <template x-for="(image, index) in images" :key="index">
                 <img
                   :src="`/inicio/${image}`"
-                  class="rounded-2xl border-2 border-gray-900 max-w-md h-72"
+                  class="rounded-2xl max-w-md h-72"
                   :class="index === current ? 'opacity-100' : 'opacity-0 absolute'"
                 />
               </template>
