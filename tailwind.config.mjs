@@ -14,8 +14,6 @@ export default {
         'background-proser': '#595959'
       },
       backgroundImage: {
-        'btnr-pattern': 'url(/header/btnr.png)',
-        'btnr-over': 'url(/header/btnr_over.png)',
         'hero': 'url(/fondo.jpg)',
       },
     },
