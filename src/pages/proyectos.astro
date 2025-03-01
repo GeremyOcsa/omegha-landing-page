@@ -6,9 +6,11 @@ import Layout from "@layouts/Layout.astro";
 
 <Layout title="Proyectos">
   <section class="bg-hero bg-fixed bg-center bg-no-repeat">
-    <div class="max-w-5xl mx-auto min-h-screen py-4">
+    <div class="mx-auto min-h-screen max-w-5xl p-4">
       <div class="rounded-2xl bg-white-general bg-opacity-60 p-5">
-        <div class="prose max-w-none text-black pb-8">
+        <div
+          class="prose max-w-none pb-8 text-justify text-sm text-black lg:text-base"
+        >
           <h1 class="pl-5 uppercase">Proyectos</h1>
           <p>
             Contamos con un equipo de colaboradores profesionales, tecnología
@@ -21,7 +23,7 @@ import Layout from "@layouts/Layout.astro";
           </p>
           <p>Algunos de nuestros proyectos más destacados:</p>
         </div>
-        <div class="grid grid-cols-2 gap-2">
+        <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
           {
             projects.map((project) => (
               <Card

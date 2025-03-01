@@ -6,12 +6,12 @@ import Card from "@components/Card.astro";
 
 <Layout title="Servicios">
   <section class="bg-hero bg-fixed bg-center bg-no-repeat">
-    <div class="max-w-5xl mx-auto min-h-screen py-4">
+    <div class="mx-auto min-h-screen max-w-5xl p-4">
       <div class="rounded-2xl bg-white-general bg-opacity-60 p-5">
         <div class="prose max-w-none pb-8">
-          <h1 class="pl-5 uppercase">Consultoría y Construcción</h1>
+          <h1 class="uppercase md:pl-5">Consultoría y Construcción</h1>
         </div>
-        <div class="grid grid-cols-2 gap-2">
+        <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
           {
             services.map((service) => (
               <Card
@@ -24,11 +24,13 @@ import Card from "@components/Card.astro";
             ))
           }
         </div>
-        <div class="prose max-w-4xl text-black pt-8 mx-auto">
-          <h2 class="uppercase text-blue-900">
+        <div
+          class="prose mx-auto max-w-4xl pt-8 text-sm text-black lg:text-base"
+        >
+          <h2 class="text-center uppercase text-blue-900 md:text-left">
             Servicios de arquitectura, urbanismo y diseño
           </h2>
-          <p>
+          <p class="text-justify">
             Ofrecemos servicios de elaboración y diseño de planos
             arquitectónicos para viviendas unifamiliares, multifamiliares y para
             toda clase de edificaciones residenciales y/o comerciales. Manejamos
@@ -40,12 +42,12 @@ import Card from "@components/Card.astro";
           <div>
             <figure>
               <img
-                class="w-full h-96 rounded-lg shadow-lg"
+                class="h-48 w-full rounded-lg shadow-lg md:h-96"
                 src="/servicios/comercial.jpg"
                 alt="Centro Comercial"
               />
               <figcaption
-                class="text-black text-center text-base font-semibold"
+                class="text-center text-sm font-semibold text-black lg:text-base"
               >
                 Diseño de un centro Comercial de 3 plantas proyectado para un
                 terreno con pendiente de inclinación
@@ -54,12 +56,12 @@ import Card from "@components/Card.astro";
 
             <figure>
               <img
-                class="w-full h-96 rounded-lg shadow-lg"
+                class="h-48 w-full rounded-lg shadow-lg md:h-96"
                 src="/servicios/comercial.jpg"
                 alt="Centro Comercial"
               />
               <figcaption
-                class="text-black text-center text-base font-semibold"
+                class="text-center text-sm font-semibold text-black lg:text-base"
               >
                 Diseño y modelado en 3D de pistas pavimentadas para la Nueva Vía
                 de Evitamiento de Huancayo en el Perú
@@ -68,12 +70,12 @@ import Card from "@components/Card.astro";
 
             <figure>
               <img
-                class="w-full h-96 rounded-lg shadow-lg"
+                class="h-48 w-full rounded-lg shadow-lg md:h-96"
                 src="/servicios/arquitectura003.png"
                 alt="Servicios arquitectura"
               />
               <figcaption
-                class="text-black text-center text-base font-semibold"
+                class="text-center text-sm font-semibold text-black lg:text-base"
               >
                 Diseño y modelado en 3D para un Centro de Acogida Residencial
               </figcaption>
