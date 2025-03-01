@@ -1,67 +1,245 @@
-<header transition:animate="none">
-  <div class="max-w-5xl mx-auto flex flex-col items-center justify-center py-4">
-    <div class="flex justify-between w-full items-center">
-      <a href="/">
-        <img class="w-auto h-14" src="/header/logo.png" alt="Logo Omegha" />
-      </a>
-      <nav>
-        <ul
-          class="max-w-5xl mx-auto flex items-start uppercase py-2 text-sm font-semibold gap-3"
+<nav class="relative flex items-center bg-white p-4">
+  <div class="mx-auto flex w-full items-center justify-between lg:max-w-5xl">
+    <a href="#">
+      <img src="header/logo.png" class="h-16" alt="" />
+    </a>
+    <div class="lg:hidden">
+      <button class="navbar-burger flex items-center p-3 text-gray-950">
+        <svg
+          class="block h-5 w-5 fill-current"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <li>
-            <a
-              href="/"
-              class="block w-full h-full px-4 py-4 text-center hover:bg-green-500 hover:text-white transition-colors duration-100"
-            >
-              Inicio
-            </a>
-          </li>
-          <li>
-            <a
-              href="/nosotros"
-              class="block w-full h-full px-4 py-4 text-center hover:bg-green-500 hover:text-white transition-colors duration-100"
-            >
-              Nosotros
-            </a>
-          </li>
-          <li>
-            <a
-              href="/ingenieria"
-              class="block w-full h-full px-4 py-4 text-center hover:bg-green-500 hover:text-white transition-colors duration-100"
-            >
-              Ingenieria
-            </a>
-          </li>
-          <li>
-            <a
-              href="/proyectos"
-              class="block w-full h-full px-4 py-4 text-center hover:bg-green-500 hover:text-white transition-colors duration-100"
-            >
-              Proyectos
-            </a>
-          </li>
-          <li>
-            <a
-              href="/servicios"
-              class="block w-full h-full px-4 py-4 text-center hover:bg-green-500 hover:text-white transition-colors duration-100"
-            >
-              Servicios
-            </a>
-          </li>
-          <li>
-            <a
-              href="/contacto"
-              class="block w-full h-full px-4 py-4 text-center hover:bg-green-500 hover:text-white transition-colors duration-100"
-            >
-              Contactenos
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="flex gap-2">
-        <img class="w-auto h-6" src="/header/spain.svg" alt="Español" />
-        <img class="w-auto h-6" src="/header/usa.svg" alt="Ingles" />
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+        </svg>
+      </button>
+    </div>
+    <ul
+      class="hidden flex-grow items-center justify-center space-x-8 uppercase lg:flex"
+    >
+      <li>
+        <a class="text-sm text-gray-400 hover:text-gray-500" href="/">Inicio</a>
+      </li>
+      <li>
+        <a class="text-sm text-gray-400 hover:text-gray-500" href="/nosotros"
+          >Nosotros</a
+        >
+      </li>
+      <li>
+        <a class="text-sm text-gray-400 hover:text-gray-500" href="/ingenieria"
+          >Ingenieria</a
+        >
+      </li>
+      <li>
+        <a class="text-sm text-gray-400 hover:text-gray-500" href="/proyectos"
+          >Proyectos</a
+        >
+      </li>
+      <li>
+        <a class="text-sm text-gray-400 hover:text-gray-500" href="/servicios"
+          >Servicio</a
+        >
+      </li>
+      <li>
+        <a class="text-sm text-gray-400 hover:text-gray-500" href="/contacto"
+          >Contactenos</a
+        >
+      </li>
+    </ul>
+    <div class="relative hidden text-left text-sm lg:inline-block">
+      <button
+        id="dropdownButtonDesktop"
+        class="flex items-center space-x-2 rounded-lg px-2 py-1"
+      >
+        <img src="header/spain.svg" alt="Español" class="h-5 w-5" />
+        <span>Español</span>
+        <svg
+          class="ml-1 h-4 w-4"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+
+      <div
+        id="dropdownMenuDesktop"
+        class="absolute mt-2 hidden w-40 rounded-lg border bg-white shadow-lg"
+      >
+        <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
+          <img src="header/spain.svg" alt="Español" class="mr-2 h-5 w-5" />
+          Español
+        </a>
+        <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
+          <img src="header/usa.svg" alt="English" class="mr-2 h-5 w-5" />
+          English
+        </a>
       </div>
     </div>
   </div>
-</header>
+  <div class="navbar-menu relative z-50 hidden">
+    <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+    <nav
+      class="fixed bottom-0 left-0 top-0 flex w-5/6 max-w-sm flex-col overflow-y-auto border-r bg-white px-6 py-6"
+    >
+      <div class="mb-8 flex items-center">
+        <a class="mr-auto" href="#">
+          <img src="header/logo.png" class="h-16" alt="" />
+        </a>
+        <button class="navbar-close">
+          <svg
+            class="h-6 w-6 cursor-pointer text-gray-400 hover:text-gray-500"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div>
+        <ul>
+          <li class="mb-1">
+            <a
+              class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
+              href="/">Inicio</a
+            >
+          </li>
+          <li class="mb-1">
+            <a
+              class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
+              href="/nosotros">Nosotros</a
+            >
+          </li>
+          <li class="mb-1">
+            <a
+              class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
+              href="/ingenieria">Ingenieria</a
+            >
+          </li>
+          <li class="mb-1">
+            <a
+              class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
+              href="/proyectos">Proyectos</a
+            >
+          </li>
+          <li class="mb-1">
+            <a
+              class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
+              href="/servicios">Servicios</a
+            >
+          </li>
+          <li class="mb-1">
+            <a
+              class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
+              href="/contacto">Contactenos</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="relative self-start">
+        <button
+          id="dropdownButton"
+          class="flex w-full items-center justify-between rounded-lg bg-gray-100 px-4 py-2 text-gray-600 hover:bg-gray-200"
+        >
+          <div class="flex items-center space-x-3">
+            <img src="header/spain.svg" alt="Español" class="h-6 w-6" />
+            <span>Español</span>
+          </div>
+          <svg
+            class="ml-2 h-4 w-4"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+
+        <div
+          id="dropdownMenu"
+          class="absolute left-0 top-full hidden w-full rounded-lg border bg-white shadow-lg"
+        >
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
+            <img src="header/spain.svg" alt="Español" class="mr-2 h-5 w-5" />
+            Español
+          </a>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
+            <img src="header/usa.svg" alt="English" class="mr-2 h-5 w-5" />
+            English
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</nav>
+
+<script is:inline>
+  // Burger menus
+  document.addEventListener("astro:page-load", function () {
+    // open
+    const burger = document.querySelectorAll(".navbar-burger");
+    const menu = document.querySelectorAll(".navbar-menu");
+
+    if (burger.length && menu.length) {
+      for (var i = 0; i < burger.length; i++) {
+        burger[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+
+    document
+      .getElementById("dropdownButtonDesktop")
+      .addEventListener("click", function () {
+        document
+          .getElementById("dropdownMenuDesktop")
+          .classList.toggle("hidden");
+      });
+
+    document
+      .getElementById("dropdownButton")
+      .addEventListener("click", function () {
+        document.getElementById("dropdownMenu").classList.toggle("hidden");
+      });
+
+    // close
+    const close = document.querySelectorAll(".navbar-close");
+    const backdrop = document.querySelectorAll(".navbar-backdrop");
+
+    if (close.length) {
+      for (var i = 0; i < close.length; i++) {
+        close[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+
+    if (backdrop.length) {
+      for (var i = 0; i < backdrop.length; i++) {
+        backdrop[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+  });
+</script>
