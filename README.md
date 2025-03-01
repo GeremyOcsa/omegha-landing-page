@@ -31,10 +31,11 @@ cd omegha-landing-page
 Instala las dependencias
 
 ```bash
-pnpm install
+npm install
 ```
 
 Inicia el servidor
 
 ```bash
-pnpm run dev
+npm run dev
+```
