@@ -41,7 +41,7 @@
     "image": "/proyectos/proyectos007.jpg",
     "description": "Diseño y Construcción de Discoteca en la Ciudad de Iquitos - Región Loreto - Perú, de 02 plantas"
   },
-    {
+  {
     "id": 8,
     "name": "Prueba de Tecnología",
     "image": "/proyectos/proyectos008.jpeg",
@@ -53,44 +53,34 @@
     "image": "/proyectos/proyectos009.jpg",
     "description": "“Mejoramiento de los Servicios de Salud del Hospital II-2 Cesar Garayar García, Iquitos - Maynas- Loreto - Perú.”"
   },
-    {
+  {
     "id": 10,
     "name": "Proyecto de Ingeniería",
     "image": "/proyectos/Proyectos010.png",
     "description": "“Proyecto de Ingeniería de Detalle del Nuevo Peaje de Santa en la Red Vial 4: Pativilca - Trujillo - Perú”"
   },
-    {
+  {
     "id": 11,
     "name": "Conjunto Residencial Suchiche",
     "image": "/proyectos/proyectos011.jpg",
     "description": "Proyecto “Conjunto Residencial Suchiche”, de 04 plantas en la Ciudad de Tarapoto - San Martin - Perú"
   },
-    {
+  {
     "id": 12,
     "name": "Proyecto integrado del Sistema de Agua Potable",
     "image": "/proyectos/proyectos012.jpg",
     "description": "“Proyecto integrado del Sistema de Agua Potable y Alcantarillado de la Localidad de Bagua - Amazonas - Perú”"
   },
-    {
+  {
     "id": 13,
     "name": "Proyecto Residencial",
     "image": "/proyectos/proyectos013.jpg",
     "description": "“Proyecto Residencial, complejo construido sobre un terreno de 2,800 m2 aprox.”"
   },
-    {
+  {
     "id": 14,
     "name": "Mausoleo Familiar",
     "image": "/proyectos/proyectos014.JPG",
     "description": "“Diseño y Obra de Mausoleo familiar en Tingo de Saposoa - San Martin - Perú”"
   }
-
-
-
-
-
-
-
-
-
-
 ]

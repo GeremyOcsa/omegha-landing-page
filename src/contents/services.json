@@ -11,38 +11,37 @@
     "image": "/servicios/servicios002.jpg",
     "description": "Hospitales y Centros de Salud"
   },
-    {
+  {
     "id": 3,
     "name": "Infraestructura Vial",
     "image": "/servicios/servicios003.JPG",
     "description": "Infraestructura Vial"
-  }
-  ,
-    {
+  },
+  {
     "id": 4,
     "name": "Obras de Saneamiento",
     "image": "/servicios/servicios004.jpg",
     "description": "Obras de Saneamiento"
   },
-    {
+  {
     "id": 5,
     "name": "Redes de Electrificación",
     "image": "/servicios/servicios005.jpg",
     "description": "Redes de Electrificación"
-  },  
+  },
   {
     "id": 6,
     "name": "Puentes Vehiculares, Peatonales, Badenes",
     "image": "/servicios/servicios006.jpg",
     "description": "Puentes Vehiculares, Peatonales, Badenes"
   },
-    {
+  {
     "id": 7,
     "name": "Habilitaciones Urbanas",
     "image": "/servicios/servicios007.jpg",
     "description": "Habilitaciones Urbanas"
   },
-    {
+  {
     "id": 8,
     "name": "Centrales Hidroeléctricas",
     "image": "/servicios/servicios008.bmp",
