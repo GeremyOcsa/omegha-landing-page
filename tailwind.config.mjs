@@ -1,4 +1,4 @@
-import typography from '@tailwindcss/typography'
+import typography from "@tailwindcss/typography";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,17 +6,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        'white-general': '#F2F2F2',
-        'green-nosotros': '#A9D18E',
-        'orange-nosotros': '#F4B183',
-        'blue-nosotros': '#0F98C2',
-        'purple-nosotros': '#7D557A',
-        'background-proser': '#595959'
+        "white-general": "#F2F2F2",
+        "green-nosotros": "#A9D18E",
+        "orange-nosotros": "#F4B183",
+        "blue-nosotros": "#0F98C2",
+        "purple-nosotros": "#7D557A",
+        "background-proser": "#595959",
       },
       backgroundImage: {
-        'hero': 'url(/fondo.jpg)',
+        hero: "url(/fondo.jpg)",
       },
     },
   },
-  plugins: [typography],
-}
+  plugins: [typography, "prettier-plugin-tailwindcss", "prettier-plugin-astro"],
+};
