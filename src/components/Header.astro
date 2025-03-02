@@ -1,7 +1,17 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { languageList } from "src/i18n/ui";
+import { useTranslations } from "src/i18n/utils";
+
+const currentLang = Astro.currentLocale || "es";
+
+const t = useTranslations(currentLang as keyof typeof languageList);
+---
+
 <nav class="relative flex items-center bg-white p-4">
   <div class="mx-auto flex w-full items-center justify-between lg:max-w-5xl">
     <a href="#">
-      <img src="header/logo.png" class="h-16" alt="" />
+      <img src="/header/logo.png" class="h-16" alt="Omegha Logo" />
     </a>
     <div class="lg:hidden">
       <button class="navbar-burger flex items-center p-3 text-gray-950">
@@ -19,31 +29,44 @@
       class="hidden flex-grow items-center justify-center space-x-8 uppercase lg:flex"
     >
       <li>
-        <a class="text-sm text-gray-400 hover:text-gray-500" href="/">Inicio</a>
-      </li>
-      <li>
-        <a class="text-sm text-gray-400 hover:text-gray-500" href="/nosotros"
-          >Nosotros</a
+        <a
+          class="text-sm text-gray-400 hover:text-gray-500"
+          href={getRelativeLocaleUrl(currentLang, "/")}>{t("nav.home")}</a
         >
       </li>
       <li>
-        <a class="text-sm text-gray-400 hover:text-gray-500" href="/ingenieria"
-          >Ingenieria</a
+        <a
+          class="text-sm text-gray-400 hover:text-gray-500"
+          href={getRelativeLocaleUrl(currentLang, "/nosotros")}
+          >{t("nav.about")}</a
         >
       </li>
       <li>
-        <a class="text-sm text-gray-400 hover:text-gray-500" href="/proyectos"
-          >Proyectos</a
+        <a
+          class="text-sm text-gray-400 hover:text-gray-500"
+          href={getRelativeLocaleUrl(currentLang, "/ingenieria")}
+          >{t("nav.enginnering")}</a
         >
       </li>
       <li>
-        <a class="text-sm text-gray-400 hover:text-gray-500" href="/servicios"
-          >Servicio</a
+        <a
+          class="text-sm text-gray-400 hover:text-gray-500"
+          href={getRelativeLocaleUrl(currentLang, "/proyectos")}
+          >{t("nav.projects")}</a
         >
       </li>
       <li>
-        <a class="text-sm text-gray-400 hover:text-gray-500" href="/contacto"
-          >Contactenos</a
+        <a
+          class="text-sm text-gray-400 hover:text-gray-500"
+          href={getRelativeLocaleUrl(currentLang, "/servicios")}
+          >{t("nav.service")}</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-sm text-gray-400 hover:text-gray-500"
+          href={getRelativeLocaleUrl(currentLang, "/contacto")}
+          >{t("nav.contact")}</a
         >
       </li>
     </ul>
@@ -52,8 +75,12 @@
         id="dropdownButtonDesktop"
         class="flex items-center space-x-2 rounded-lg px-2 py-1"
       >
-        <img src="header/spain.svg" alt="Español" class="h-5 w-5" />
-        <span>Español</span>
+        <img
+          src={currentLang === "es" ? "/header/spain.svg" : "/header/usa.svg"}
+          alt={currentLang === "es" ? "Español" : "English"}
+          class="h-5 w-5"
+        />
+        <span>{currentLang === "es" ? "Español" : "English"}</span>
         <svg
           class="ml-1 h-4 w-4"
           xmlns="http://www.w3.org/2000/svg"
@@ -71,14 +98,23 @@
         id="dropdownMenuDesktop"
         class="absolute mt-2 hidden w-40 rounded-lg border bg-white shadow-lg"
       >
-        <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
-          <img src="header/spain.svg" alt="Español" class="mr-2 h-5 w-5" />
-          Español
-        </a>
-        <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
-          <img src="header/usa.svg" alt="English" class="mr-2 h-5 w-5" />
-          English
-        </a>
+        {
+          Object.entries(languageList).map(([key, label]: [string, string]) => {
+            return (
+              <a
+                href={`/${key}`}
+                class="flex items-center px-4 py-2 hover:bg-gray-100"
+              >
+                <img
+                  src={`/header/${key === "es" ? "spain.svg" : "usa.svg"}`}
+                  alt={label}
+                  class="mr-2 h-5 w-5"
+                />
+                {label}
+              </a>
+            );
+          })
+        }
       </div>
     </div>
   </div>
@@ -89,7 +125,7 @@
     >
       <div class="mb-8 flex items-center">
         <a class="mr-auto" href="#">
-          <img src="header/logo.png" class="h-16" alt="" />
+          <img src="/header/logo.png" class="h-16" alt="" />
         </a>
         <button class="navbar-close">
           <svg
@@ -112,37 +148,42 @@
           <li class="mb-1">
             <a
               class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
-              href="/">Inicio</a
+              href={getRelativeLocaleUrl(currentLang, "/")}>{t("nav.home")}</a
             >
           </li>
           <li class="mb-1">
             <a
               class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
-              href="/nosotros">Nosotros</a
+              href={getRelativeLocaleUrl(currentLang, "/nosotros")}
+              >{t("nav.about")}</a
             >
           </li>
           <li class="mb-1">
             <a
               class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
-              href="/ingenieria">Ingenieria</a
+              href={getRelativeLocaleUrl(currentLang, "/ingenieria")}
+              >{t("nav.enginnering")}</a
             >
           </li>
           <li class="mb-1">
             <a
               class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
-              href="/proyectos">Proyectos</a
+              href={getRelativeLocaleUrl(currentLang, "/proyectos")}
+              >{t("nav.projects")}</a
             >
           </li>
           <li class="mb-1">
             <a
               class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
-              href="/servicios">Servicios</a
+              href={getRelativeLocaleUrl(currentLang, "/servicios")}
+              >{t("nav.service")}</a
             >
           </li>
           <li class="mb-1">
             <a
               class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
-              href="/contacto">Contactenos</a
+              href={getRelativeLocaleUrl(currentLang, "/contacto")}
+              >{t("nav.contact")}</a
             >
           </li>
         </ul>
@@ -153,8 +194,14 @@
           class="flex w-full items-center justify-between rounded-lg bg-gray-100 px-4 py-2 text-gray-600 hover:bg-gray-200"
         >
           <div class="flex items-center space-x-3">
-            <img src="header/spain.svg" alt="Español" class="h-6 w-6" />
-            <span>Español</span>
+            <img
+              src={currentLang === "es"
+                ? "/header/spain.svg"
+                : "/header/usa.svg"}
+              alt={currentLang === "es" ? "Español" : "English"}
+              class="h-5 w-5"
+            />
+            <span>{currentLang === "es" ? "Español" : "English"}</span>
           </div>
           <svg
             class="ml-2 h-4 w-4"
@@ -173,14 +220,25 @@
           id="dropdownMenu"
           class="absolute left-0 top-full hidden w-full rounded-lg border bg-white shadow-lg"
         >
-          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
-            <img src="header/spain.svg" alt="Español" class="mr-2 h-5 w-5" />
-            Español
-          </a>
-          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
-            <img src="header/usa.svg" alt="English" class="mr-2 h-5 w-5" />
-            English
-          </a>
+          {
+            Object.entries(languageList).map(
+              ([key, label]: [string, string]) => {
+                return (
+                  <a
+                    href={`/${key}`}
+                    class="flex items-center px-4 py-2 hover:bg-gray-100"
+                  >
+                    <img
+                      src={`/header/${key === "es" ? "spain.svg" : "usa.svg"}`}
+                      alt={label}
+                      class="mr-2 h-5 w-5"
+                    />
+                    {label}
+                  </a>
+                );
+              }
+            )
+          }
         </div>
       </div>
     </nav>
