@@ -1,0 +1,63 @@
+---
+import Mapita from "@components/Mapita.astro";
+import Layout from "@layouts/Layout.astro";
+
+import type { languageList } from "src/i18n/ui";
+import { useTranslations } from "src/i18n/utils";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
+---
+
+<Layout title="Contáctenos">
+  <section class="bg-hero bg-fixed bg-center bg-no-repeat">
+    <div class="mx-auto min-h-screen max-w-5xl p-4">
+      <div class="rounded-2xl bg-white-general bg-opacity-60 p-5">
+        <article class="prose max-w-none text-sm lg:text-base">
+          <h1 class="mb-0 pl-5 uppercase md:mb-4">{t("contact.title")}</h1>
+          <div class="flex flex-col justify-center gap-4 md:flex-row">
+            <div class="not-prose mt-4 grid gap-1 text-justify text-black">
+              <p class="">
+                {t("contact.p")}
+              </p>
+              <div class="py-2">
+                <h2 class="pl-5 font-bold uppercase">{t("contact.write")}</h2>
+                <span class="flex flex-row items-center gap-2"
+                  ><img src="/footer/Imagen1.png" alt="WhatsApp" /> WhatsApp: (+51)
+                  996 723 157</span
+                >
+                <span class="flex flex-row items-center gap-2"
+                  ><img src="/footer/Imagen2.png" alt="Correo" /> Email: contacto@omeghaconstructor.com
+                </span>
+              </div>
+              <div>
+                <h2 class="pl-5 font-bold uppercase">
+                  {t("contact.location")}
+                </h2>
+                <p class="mt-2 pl-5 font-bold">{t("contact.tarapoto")}</p>
+                <span class="flex flex-row items-center gap-2"
+                  ><img src="/footer/Imagen3.png" alt="Ubicacion" /> Jr. Tacna Nº
+                  348, Barrio Huayco
+                </span>
+              </div>
+              <div>
+                <p class="mt-2 pl-5 font-bold">{t("contact.lima")}</p>
+                <span class="flex flex-row items-center gap-2"
+                  ><img src="/footer/Imagen3.png" alt="Ubicacion" /> Calle José Gonzáles
+                  N° 668, Miraflores
+                </span>
+              </div>
+              <div class="mt-2">
+                <h2 class="pl-5 font-bold uppercase">{t("contact.web")}</h2>
+                <span class="flex flex-row items-center gap-2"
+                  ><img src="/footer/Imagen4.png" alt="Ubicacion" /> www.omeghaconstructor.com
+                </span>
+              </div>
+            </div>
+            <Mapita />
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,106 @@
+---
+import Layout from "@layouts/Layout.astro";
+import type { languageList } from "src/i18n/ui";
+import { useTranslations } from "src/i18n/utils";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
+---
+
+<Layout title="Ingenieria">
+  <section class="bg-hero bg-fixed bg-center bg-no-repeat">
+    <div class="mx-auto min-h-screen max-w-5xl p-4">
+      <div
+        class="flex flex-col gap-6 rounded-2xl bg-white-general bg-opacity-60 p-5"
+      >
+        <div
+          class="prose max-w-none text-justify text-sm text-black lg:text-base"
+        >
+          <h1 class="pl-5 uppercase">{t("engi.title")}</h1>
+          <p>
+            {t("engi.des")}
+          </p>
+          <span>{t("engi.span")}</span>
+        </div>
+
+        <article class="rounded-2xl bg-blue-200 bg-opacity-40 p-5">
+          <div class="flex flex-col justify-center gap-4 md:flex-row-reverse">
+            <div
+              class="prose self-center text-justify text-sm text-black lg:text-base"
+            >
+              <h3 class="text-blue-900">
+                {t("firstPro.title")}
+              </h3>
+              <p>
+                {t("firstPro.des")}
+              </p>
+            </div>
+            <img
+              class="h-auto w-[580px] rounded-2xl object-cover md:w-96 lg:h-72 lg:w-full"
+              src="/ingenieria/IMG-20191125-WA0011.jpeg"
+              alt="Condominio Biosostenible Yori"
+            />
+          </div>
+        </article>
+
+        <article class="rounded-2xl bg-blue-200 bg-opacity-40 p-5">
+          <div class="flex flex-col justify-center gap-4 md:flex-row-reverse">
+            <div
+              class="prose self-center text-justify text-sm text-black md:w-1/2 lg:text-base"
+            >
+              <h3 class="text-blue-900">{t("secondPro.title")}</h3>
+              <p>
+                {t("secondPro.des")}
+              </p>
+            </div>
+            <img
+              class="h-72 w-[468px] flex-1 rounded-2xl object-cover md:w-96 lg:h-72 lg:w-[469px]"
+              src="/ingenieria/IMG-20191114-WA0014.jpg"
+              alt="Iglesia de Tarapoto"
+            />
+          </div>
+        </article>
+
+        <article class="rounded-2xl bg-blue-200 bg-opacity-40 p-5">
+          <div class="flex flex-col justify-center gap-4 md:flex-row-reverse">
+            <div
+              class="prose self-center text-justify text-sm text-black md:w-1/2 lg:text-base"
+            >
+              <h3 class="text-blue-900">
+                {t("thirdPro.title")}
+              </h3>
+              <p>
+                {t("thridPro.des")}
+              </p>
+            </div>
+            <img
+              class="h-72 w-[468px] flex-1 rounded-2xl object-cover md:w-96 lg:h-72 lg:w-[469px]"
+              src="/ingenieria/20160420_113555.jpg"
+              alt="Diseño de estructuras"
+            />
+          </div>
+        </article>
+
+        <article class="rounded-2xl bg-blue-200 bg-opacity-40 p-5">
+          <div class="flex flex-col justify-center gap-4 md:flex-row-reverse">
+            <div
+              class="prose self-center text-justify text-sm text-black md:w-1/2 lg:text-base"
+            >
+              <h3 class="text-blue-900">
+                {t("fourthPro.title")}
+              </h3>
+              <p>
+                {t("fourthPro.des")}
+              </p>
+            </div>
+            <img
+              class="w-[482px] rounded-2xl object-cover md:h-72 lg:w-[502px]"
+              src="/ingenieria/Obra en Anchas 05.jpeg"
+              alt="Primera carretera"
+            />
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>

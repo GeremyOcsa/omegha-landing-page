@@ -1,0 +1,86 @@
+---
+import Layout from "@layouts/Layout.astro";
+import services from "@contents/services_es.json";
+import Card from "@components/Card.astro";
+
+import { useTranslations } from "src/i18n/utils";
+import type { languageList } from "src/i18n/ui";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
+---
+
+<Layout title="Servicios">
+  <section class="bg-hero bg-fixed bg-center bg-no-repeat">
+    <div class="mx-auto min-h-screen max-w-5xl p-4">
+      <div class="rounded-2xl bg-white-general bg-opacity-60 p-5">
+        <div class="prose max-w-none pb-8">
+          <h1 class="uppercase md:pl-5">{t("serv.title")}</h1>
+        </div>
+        <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
+          {
+            services.map((service) => (
+              <Card
+                key={service.id}
+                title={service.name}
+                description={service.description}
+                image={service.image}
+                position="justify-center"
+              />
+            ))
+          }
+        </div>
+        <div
+          class="prose mx-auto max-w-4xl pt-8 text-sm text-black lg:text-base"
+        >
+          <h2 class="text-center uppercase text-blue-900 md:text-left">
+            {t("serv.h2")}
+          </h2>
+          <p class="text-justify">
+            {t("serv.des")}
+          </p>
+          <div>
+            <figure>
+              <img
+                class="h-48 w-full rounded-lg shadow-lg md:h-96"
+                src="/servicios/comercial.jpg"
+                alt="Centro Comercial"
+              />
+              <figcaption
+                class="text-center text-sm font-semibold text-black lg:text-base"
+              >
+                {t("serv.para1")}
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                class="h-48 w-full rounded-lg shadow-lg md:h-96"
+                src="/servicios/comercial.jpg"
+                alt="Centro Comercial"
+              />
+              <figcaption
+                class="text-center text-sm font-semibold text-black lg:text-base"
+              >
+                {t("serv.para2")}
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                class="h-48 w-full rounded-lg shadow-lg md:h-96"
+                src="/servicios/arquitectura003.png"
+                alt="Servicios arquitectura"
+              />
+              <figcaption
+                class="text-center text-sm font-semibold text-black lg:text-base"
+              >
+                {t("serv.para3")}
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
