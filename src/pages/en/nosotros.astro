@@ -1,0 +1,144 @@
+---
+import Layout from "@layouts/Layout.astro";
+import type { languageList } from "src/i18n/ui";
+import { useTranslations } from "src/i18n/utils";
+
+const valores = [
+  ["Honesty.", "Order.", "Simplicity.", "Professional Vocation."],
+  ["Responsibility.", "Discipline.", "Precision.", "Constant Innovation."],
+];
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
+---
+
+<Layout title="About Us">
+  <section class="bg-hero bg-fixed bg-center bg-no-repeat">
+    <div class="mx-auto min-h-screen max-w-5xl p-4">
+      <div
+        class="flex flex-col gap-3 rounded-2xl bg-white-general bg-opacity-60 p-5 md:gap-6"
+      >
+        <article class="prose max-w-none text-sm lg:text-base">
+          <h1 class="uppercase md:pl-5">{t("about.title")}</h1>
+          <div class="flex flex-col justify-center gap-4 md:flex-row">
+            <div class="text-justify text-black md:mt-4">
+              <p set:html={t("about.firstP")} />
+              <p>
+                {t("about.secondP")}
+              </p>
+            </div>
+            <img
+              class="h-72 w-auto rounded-2xl md:self-center"
+              src="/nosotros/nosotros001.jpg"
+              alt="Omegha Nosotros"
+            />
+          </div>
+        </article>
+
+        <article class="rounded-2xl bg-green-nosotros bg-opacity-40 p-5">
+          <div class="flex flex-col justify-center gap-4 md:flex-row-reverse">
+            <div class="prose text-justify text-sm text-black lg:text-base">
+              <h2 class="pl-5 uppercase text-blue-900">{t("mission.title")}</h2>
+              <p>
+                {t("mission.des")}
+              </p>
+            </div>
+            <img
+              class="h-48 w-auto rounded-2xl md:h-auto md:w-96 lg:h-72 lg:w-full"
+              src="/nosotros/nosotros002.jpg"
+              alt="Omegha Mision"
+            />
+          </div>
+        </article>
+
+        <article class="rounded-2xl bg-orange-nosotros bg-opacity-40 p-4">
+          <div class="flex flex-col justify-center gap-4 md:flex-row">
+            <div class="prose text-justify text-sm text-black lg:text-base">
+              <h2 class="pl-5 uppercase text-blue-900">{t("vision.title")}</h2>
+              <p>
+                {t("vision.des")}
+              </p>
+            </div>
+            <img
+              class="h-48 w-auto rounded-2xl md:h-auto md:w-96 lg:h-72 lg:w-full"
+              src="/nosotros/nosotros003.jpg"
+              alt="Omegha Vision"
+            />
+          </div>
+        </article>
+
+        <article
+          class="prose max-w-none text-sm text-black marker:text-black lg:text-base"
+        >
+          <h2 class="uppercase text-blue-900 md:pl-5">{t("values.title")}</h2>
+          <p set:html={t("values.des")} />
+          <ol type="a">
+            <li>{t("values.liF")}</li>
+            <li>{t("values.liP")}</li>
+          </ol>
+          <p>
+            {t("values.para")}
+          </p>
+        </article>
+
+        <article
+          class="prose max-w-none rounded-2xl bg-blue-nosotros bg-opacity-40 p-3"
+        >
+          <div
+            class="flex flex-col-reverse justify-center gap-4 md:flex-row-reverse"
+          >
+            <div class="text-justify text-sm text-black lg:text-base">
+              <p>
+                {t("values.firstI")}
+              </p>
+              <p>
+                {t("values.secondI")}
+              </p>
+            </div>
+            <img
+              class="not-prose h-48 w-auto rounded-2xl md:h-auto md:w-96 lg:h-72"
+              src="/nosotros/valores001.jpg"
+              alt="Omegha Valores"
+            />
+          </div>
+        </article>
+
+        <article
+          class="max-w-none rounded-2xl bg-purple-nosotros bg-opacity-40 p-3"
+        >
+          <div class="flex flex-col-reverse justify-center gap-4 md:flex-row">
+            <div
+              class="p-1 text-justify text-sm text-black md:p-0 lg:text-base"
+            >
+              <p class="prose text-sm text-black lg:text-base">
+                {t("values.firstS")}
+              </p>
+              <p class="my-2">{t("values.secondS")}</p>
+              <div class="my-4 flex flex-row gap-4 text-left">
+                {
+                  valores.map((grupo) => (
+                    <ul class="list-none">
+                      {grupo.map((valor) => (
+                        <li class="before:mr-1 before:content-['✓']">
+                          {valor}
+                        </li>
+                      ))}
+                    </ul>
+                  ))
+                }
+              </div>
+              <p class="prose text-sm text-black lg:text-base">
+                {t("values.thirdS")}
+              </p>
+            </div>
+            <img
+              class="h-48 w-auto rounded-2xl md:h-auto md:w-96 lg:h-72"
+              src="/nosotros/valores002.jpg"
+              alt="Omegha Valores"
+            />
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>
