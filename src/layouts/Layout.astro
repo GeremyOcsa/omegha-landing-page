@@ -3,6 +3,8 @@ import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import { ClientRouter } from "astro:transitions";
 
+const localLang = Astro.currentLocale || "es";
+
 interface Props {
   title: string;
 }
@@ -11,7 +13,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={localLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
