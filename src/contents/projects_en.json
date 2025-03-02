@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Obra Demolición",
+    "image": "/proyectos/proyectos001.jpg",
+    "description": "Demolition of the regional hospital, construction of the new Hospital II-2 in Tarapoto, including a contingency hospital in Banda de Shilcayo - San Martin - Peru."
+  },
+  {
+    "id": 2,
+    "name": "El Embrujo",
+    "image": "/proyectos/proyectos002.jpg",
+    "description": "Project “El Embrujo, Design of a Shopping Center and Urbanization on 17 hectares of land”."
+  },
+  {
+    "id": 3,
+    "name": "Obra Mejoramiento",
+    "image": "/proyectos/proyectos003.jpg",
+    "description": "Improvement and Expansion of the Drinking Water and Sewage System of the City of Rioja - San Martin - Peru”."
+  },
+  {
+    "id": 4,
+    "name": "Consultoría",
+    "image": "/proyectos/proyectos004.jpeg",
+    "description": "Consultancy “Detailed Engineering Project (PID) for Road Sections Nº 01 and 04 of the North Amazon Multimodal Axis” - IIRSA North - Peru."
+  },
+  {
+    "id": 5,
+    "name": "Condominio Diosostenible Yori",
+    "image": "/proyectos/proyectos005.jpg",
+    "description": "Design and Construction of the “Yori Biosustainable Condominium - San Martin - Peru”."
+  },
+  {
+    "id": 6,
+    "name": "Consultoría",
+    "image": "/proyectos/proyectos006.jpg",
+    "description": "Consultancy “Improvement of the Buenos Aires - Santa Catalina Neighborhood Road (access to Motilones Bridge) - Flor del Mayo, Left Bank of the Mayo River, Moyobamba - San Martin - Peru”."
+  },
+  {
+    "id": 7,
+    "name": "Discoteca",
+    "image": "/proyectos/proyectos007.jpg",
+    "description": "Design and Construction of Discotheque in the City of Iquitos - Loreto Region - Peru, of 02 floors."
+  },
+  {
+    "id": 8,
+    "name": "Prueba de Tecnología",
+    "image": "/proyectos/proyectos008.jpeg",
+    "description": "Service “Testing of Roadway Technology with R-SOIL at the head of the Palmas del Espino Hangar - Santa Lucia - Tocache - Peru”."
+  },
+  {
+    "id": 9,
+    "name": "Obra Mejoramiento",
+    "image": "/proyectos/proyectos009.jpg",
+    "description": "“Improvement of Health Services at Hospital II-2 Cesar Garayar Garcia, Iquitos - Maynas- Loreto - Peru.”"
+  },
+  {
+    "id": 10,
+    "name": "Proyecto de Ingeniería",
+    "image": "/proyectos/Proyectos010.png",
+    "description": "“Detailed Engineering Project for the New Santa Toll on Road Network 4: Pativilca - Trujillo - Peru”."
+  },
+  {
+    "id": 11,
+    "name": "Conjunto Residencial Suchiche",
+    "image": "/proyectos/proyectos011.jpg",
+    "description": "Project “Suchiche Residential Complex”, 04 floors in the city of Tarapoto - San Martin - Peru."
+  },
+  {
+    "id": 12,
+    "name": "Proyecto integrado del Sistema de Agua Potable",
+    "image": "/proyectos/proyectos012.jpg",
+    "description": "“Integrated Project of the Potable Water and Sewage System of the Municipality of Bagua - Amazonas - Peru”."
+  },
+  {
+    "id": 13,
+    "name": "Proyecto Residencial",
+    "image": "/proyectos/proyectos013.jpg",
+    "description": "“Residential project, complex built on a 2,800 m2 lot approx.”"
+  },
+  {
+    "id": 14,
+    "name": "Mausoleo Familiar",
+    "image": "/proyectos/proyectos014.JPG",
+    "description": "“Design and construction of a family mausoleum in Tingo de Saposoa - San Martin - Peru”."
+  }
+]
