@@ -1,0 +1,60 @@
+---
+import projects from "@contents/projects_en.json";
+import { Icon } from "astro-icon/components";
+---
+
+{
+  projects.map((project) => (
+    <div class="group relative w-full overflow-hidden rounded-2xl border-2 border-gray-950 shadow-lg">
+      <div class="relative">
+        <div id="my-slider" class="relative">
+          <img
+            src={project.image}
+            alt={project.name}
+            class="w-auto object-cover transition-transform duration-300 group-hover:scale-110 md:h-[222px] lg:h-[298px]"
+          />
+          <div class="absolute inset-0 flex flex-col items-center justify-end bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <a
+              href={project.image}
+              data-pswp-width="580"
+              data-pswp-height="350"
+              target="_blank"
+              data-cropped="true"
+              class="absolute left-4 top-4 flex h-7 w-7 items-center justify-center rounded-full bg-white bg-opacity-20 transition hover:bg-opacity-40 md:h-10 md:w-10"
+            >
+              <Icon name="search" class="text-sm text-white md:text-xl" />
+            </a>
+            <p class="p-3 text-center text-xs text-white lg:text-base">
+              {project.description}
+            </p>
+          </div>
+          {project.gallery &&
+            project.gallery.map((img) => (
+              <a
+                href={img}
+                data-pswp-width="580"
+                data-pswp-height="350"
+                target="_blank"
+                data-cropped="true"
+                style={{ display: "none" }}
+              />
+            ))}
+        </div>
+      </div>
+    </div>
+  ))
+}
+
+<script>
+  import PhotoSwipeLightBox from "photoswipe/lightbox";
+  import "photoswipe/style.css";
+
+  document.addEventListener("astro:page-load", function () {
+    const lightbox = new PhotoSwipeLightBox({
+      gallery: "#my-slider",
+      children: "a",
+      pswpModule: () => import("photoswipe"),
+    });
+    lightbox.init();
+  });
+</script>
