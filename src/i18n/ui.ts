@@ -8,10 +8,10 @@ export const labels = {
     //Nav
     "nav.home": "Inicio",
     "nav.about": "Nosotros",
-    "nav.enginnering": "Ingenieria",
+    "nav.enginnering": "Ingeniería",
     "nav.projects": "Proyectos",
     "nav.service": "Servicio",
-    "nav.contact": "Contactenos",
+    "nav.contact": "Contáctenos",
     // Inicio
     "index.title": "Sean Bienvenidos",
     "index.firstP":
@@ -24,16 +24,16 @@ export const labels = {
       "<strong>Omegha Constructor Building Co. S.A.C.</strong> es una empresa orientada a la industria de la construcción, desarrollando consultorías y proyectos de todo el ámbito de la ingeniería y la arquitectura, así como la construcción de obras civiles, obras de saneamiento, obras electromecánicas, puentes y carreteras, y servicios de construcción de edificación e inmobiliarios.",
     "about.secondP":
       "También nos dedicamos al mantenimiento de infraestructura, administración de mantenimiento de edificios, saneamiento legal de Inmuebles; y brindamos soluciones informáticas para el e-Marketing y el negocio electrónico.",
-    "mission.title": "Mision",
+    "mission.title": "Misión",
     "mission.des":
       "Basándonos en las necesidades de infraestructura y de espacios y/o instalaciones productivas, ofrecer soluciones ingenieriles y/o inmobiliarias de alta calidad mediante la continua innovación en el diseño, una búsqueda permanente de nuevas y mejores tecnologías, el perfeccionamiento de los procesos constructivos y el servicio personalizado a nuestros clientes.",
-    "vision.title": "Vision",
+    "vision.title": "Visión",
     "vision.des":
       "Consolidarnos como la mayor solución de calidad ingenieril de construcción en el oriente peruano, contribuyendo al desarrollo de la región generando valor con nuestras obras y proyectos.",
     "values.title": "Nuestros Valores",
     "values.des":
-      "En <strong>Omegha Constructor Building Co. S.A.C.</strong> partimos de dos principios fundamentales:",
-    "values.liF": "El Respeto por el medio en que se interviene, y",
+      "En Omegha Constructor Building Co. S.A.C. partimos de dos principios fundamentales:",
+    "values.liF": "El Respeto por el medio en que se interviene",
     "values.liP": "El Respeto por las etnias que habitan el lugar.",
     "values.para":
       "Nuestra empresa desarrolla proyectos amigables con la naturaleza, respetando sus riquezas, biodiversidad, paisajes, microclimas y las actividades productivas de los pobladores lugareños.",
@@ -43,14 +43,14 @@ export const labels = {
       "Es de esta forma que nuestras soluciones ingenieriles y constructivas armonizan con el medio sin dañarlo o modificarlo sensiblemente, e impulsan el crecimiento sostenible, ordenado y permanente de las actividades productivas y económicas de la población. Mejorando su calidad de vida, potenciando su productividad, y generando valor.",
     "values.firstS":
       "Nos debemos a nuestro producto, y ello nos compromete a buscar permanentemente la excelencia en todos nuestros quehaceres y servicios.",
-    "values.secondS": "Al interior de nuestra organización,",
+    "values.secondS": "Al interior de nuestra organización:",
     "values.thirdS":
       "Son nuestra impecable constante y se conjugan para obtener nuestro mejor producto al servicio de usted.",
     // Ingenieria
-    "engi.title": "Ingenieria",
+    "engi.title": "Ingeniería",
     "engi.des":
       "Nuestro enfoque por ofrecer siempre la máxima calidad y la satisfacción de nuestros clientes es el motor que nos impulsa a mantenernos a la vanguardia de las nuevas tecnologías, en una búsqueda constante de soluciones de ingeniería eficientes, ecológicas, adaptables al medio ambiente y económicas.",
-    "engi.span": "Algunos ejemplos de nuestra ingeniería y mas:",
+    "engi.span": "Algunos ejemplos de nuestra ingeniería y más:",
     "firstPro.title": "Diseño 3D del Condominio Biosostenible Yori",
     "firstPro.des":
       "Construido en una zona de amortiguamiento su serio compromiso con el entorno, la flora y la fauna del lugar hacen de este un muy rico ejemplo de convivencia humano-ambiental. Las soluciones constructivas y materiales empleados han sido elegidos y desarrollados para lograr la sostenibilidad del proyecto y su adaptación al medio ambiente.",
@@ -59,11 +59,11 @@ export const labels = {
       "Mediante la incorporación de nuevas tecnologías y conceptos se logra el rediseño y mejoramiento de edificaciones y espacios antiguos, con diseños innovadores y futuristas que modernizan y enriquecen su arquitectura y que otorguen valor y protagonismo de los mismos en la región, al mismo tiempo que se preserva el atractivo cultural e histórico de la población lugareña.",
     "thirdPro.title": "Diseño de estructuras y armaduras especiales",
     "thridPro.des":
-      "En este campo la ingeniería de detalle es determinante, explotando al máximo las bondades del material y cuidando los limites del mismo. Conocer la naturaleza intima de la materia y su versatilidad permite crear aleaciones eficientes para soluciones estructurales de gran demanda. Ejemplo de esto es la armadura especial diseñada para la entrada principal del Hospital de Tarapoto.",
+      "En este campo la ingeniería de detalle es determinante, explotando al máximo las bondades del material y cuidando los limites del mismo. Conocer la naturaleza íntima de la materia y su versatilidad permite crear aleaciones eficientes para soluciones estructurales de gran demanda. Ejemplo de esto es la armadura especial diseñada para la entrada principal del Hospital de Tarapoto.",
     "fourthPro.title":
       "Primera carretera en el Perú construida bajo el sistema de petrificación de suelos",
     "fourthPro.des":
-      "Tras ensayos y pruebas encontramos la solución mas viable para el 90% del suelo peruano, la estabilización con copolímeros, una tecnología de muy alta eficiencia y rendimiento, aprobada por el MTC, que aglomera partículas finas en un proceso irreversible de petrificación, lo que dota de mucha mayor resistencia al suelo.",
+      "Tras ensayos y pruebas encontramos la solución más viable para el 90% del suelo peruano, la estabilización con copolímeros, una tecnología de muy alta eficiencia y rendimiento, aprobada por el MTC, que aglomera partículas finas en un proceso irreversible de petrificación, lo que dota de mucha mayor resistencia al suelo.",
     // Proyectos
     "pro.title": "Proyectos",
     "pro.des":
@@ -73,7 +73,7 @@ export const labels = {
     "serv.title": "Consultoría y Construcción",
     "serv.h2": "Servicios de arquitectura, urbanismo y diseño",
     "serv.des":
-      "Ofrecemos servicios de elaboración y diseño de planos arquitectónicos para viviendas unifamiliares, multifamiliares y para toda clase de edificaciones residenciales y/o comerciales. Manejamos un programa tridimensional para generar vistas en 3d que usted vea cómo quedará el diseño antes de su construcción, logrando así un diseño personalizado y un desarrollo del proyecto integral ajustándonos a las necesidades del cliente y a su presupuesto.",
+      "Ofrecemos servicios de elaboración y diseño de planos arquitectónicos para viviendas unifamiliares, multifamiliares y para toda clase de edificaciones residenciales y/o comerciales. Manejamos un programa tridimensional para generar vistas en 3D que usted vea cómo quedará el diseño antes de su construcción, logrando así un diseño personalizado y un desarrollo del proyecto integral ajustándonos a las necesidades del cliente y a su presupuesto.",
     "serv.para1":
       "Diseño de un centro Comercial de 3 plantas proyectado para un terreno con pendiente de inclinación",
     "serv.para2":
@@ -81,11 +81,11 @@ export const labels = {
     "serv.para3":
       "Diseño y modelado en 3D para un Centro de Acogida Residencial",
     // Contacto
-    "contact.title": "Contactenos",
+    "contact.title": "Contáctenos",
     "contact.p":
       "Para más información sobre nuestros servicios y/o proyectos, póngase en contacto con nosotros y lo atenderemos personalmente.",
-    "contact.write": "Escribanos en:",
-    "contact.location": "Ubiquenos en:",
+    "contact.write": "Escríbanos en:",
+    "contact.location": "Ubíquenos en:",
     "contact.tarapoto": "Oficina Tarapoto",
     "contact.lima": "Oficina Lima",
     "contact.web": "Nuestra web:",
@@ -118,8 +118,8 @@ export const labels = {
       "As the largest consolidate solution engineering quality of construction in the middle of Peru, contributing to the development of the region by creating value with our works and projects.",
     "values.title": "Our Values",
     "values.des":
-      "In <strong>Omegha Constructor's Building Co. S.A.C</strong> we start from two fundamental principles:",
-    "values.liF": "Respect for the environment in which it intervenes, and",
+      "In Omegha Constructor's Building Co. S.A.C we start from two fundamental principles:",
+    "values.liF": "Respect for the environment in which it intervenes",
     "values.liP": "Respect for the ethnic groups that inhabit the place",
     "values.para":
       "Our company develops projects friendly with nature, respecting their wealth, biodiversity, landscapes, microclimates and the productive activities of the Settlers locals.",
@@ -129,7 +129,7 @@ export const labels = {
       "It is in this way that our engineering solutions and constructive harmonize with the middle without damaging it or modify it considerably, and spur sustainable growth, orderly and permanent productive and economic activities of the population. Improving their quality of life, enhancing their productivity and generating value.",
     "values.firstS":
       "We owe it to our product, and it commits us to permanently seek excellence in all our chores and services.",
-    "values.secondS": "Within our Organization,",
+    "values.secondS": "Within our Organization:",
     "values.thirdS":
       "Are our impeccable constant and combine to give our best product to service you.",
     // Ingenieria
