@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import services from "@contents/services_en.json";
+import services from "@contents/services_es.json";
 import Card from "@components/Card.astro";
 
 import { useTranslations } from "src/i18n/utils";
@@ -10,12 +10,12 @@ const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
-<Layout title="Servicios">
+<Layout title="Services">
   <section class="bg-hero bg-fixed bg-center bg-no-repeat">
     <div class="mx-auto min-h-screen max-w-5xl p-4">
       <div class="rounded-2xl bg-white-general bg-opacity-60 p-5">
         <div class="prose max-w-none pb-8">
-          <h1 class="uppercase md:pl-5">{t("serv.title")}</h1>
+          <h1 class="text-center uppercase">{t("serv.title")}</h1>
         </div>
         <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
           {

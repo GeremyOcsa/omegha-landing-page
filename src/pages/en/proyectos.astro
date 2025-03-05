@@ -1,8 +1,6 @@
 ---
-import Card from "@components/Card.astro";
-import projects from "@contents/projects_en.json";
+import GalleryEn from "@components/GalleryEn.astro";
 import Layout from "@layouts/Layout.astro";
-
 import type { languageList } from "src/i18n/ui";
 import { useTranslations } from "src/i18n/utils";
 
@@ -17,24 +15,14 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         <div
           class="prose max-w-none pb-8 text-justify text-sm text-black lg:text-base"
         >
-          <h1 class="pl-5 uppercase">{t("pro.title")}</h1>
+          <h1 class="text-center uppercase">{t("pro.title")}</h1>
           <p>
             {t("pro.des")}
           </p>
           <span>{t("pro.span")}</span>
         </div>
         <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
-          {
-            projects.map((project) => (
-              <Card
-                key={project.id}
-                title={project.name}
-                description={project.description}
-                image={project.image}
-                position="justify-end"
-              />
-            ))
-          }
+          <GalleryEn />
         </div>
       </div>
     </div>

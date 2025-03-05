@@ -3,47 +3,45 @@ import Layout from "@layouts/Layout.astro";
 import type { languageList } from "src/i18n/ui";
 import { useTranslations } from "src/i18n/utils";
 
-const images = [
-  "/inicio001.jpg",
-  "/inicio002.jpg",
-  "/inicio003.jpg",
-  "/inicio004.jpg",
-  "/inicio005.jpg",
-];
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
-<Layout title="Inicio">
+<Layout title="Home">
   <section class="bg-hero bg-fixed bg-center bg-no-repeat">
     <div class="mx-auto min-h-screen p-4 lg:max-w-5xl">
       <article
         class="prose max-w-none rounded-2xl bg-white-general bg-opacity-60 p-5 text-sm text-black lg:text-base"
       >
-        <h1 class="uppercase md:pl-5">{t("index.title")}</h1>
+        <h1 class="md:animate-slide-right uppercase md:pl-5">
+          {t("index.title")}
+        </h1>
         <div class="flex flex-col md:flex-row md:gap-3">
           <div class="mt-4 text-justify text-black md:w-1/2">
-            <p set:html={t("index.firstP")} />
-            <p>
+            <p
+              class="md:animate-slide-right-slow"
+              set:html={t("index.firstP")}
+            />
+            <p class="md:animate-slide-right-slow">
               {t("index.secondP")}
             </p>
           </div>
           <div
+            class="md:animate-slide-left"
             x-data="{ current: 0, images: [
-            '/inicio001.jpg',
-            '/inicio002.jpg',
-            '/inicio003.jpg',
-            '/inicio004.jpg',
-            '/inicio005.jpg',
-            ],next() { this.current = (this.current + 1) % this.images.length; } }"
+          '/inicio001.jpg',
+          '/inicio002.jpg',
+          '/inicio003.jpg',
+          '/inicio004.jpg',
+          '/inicio005.jpg',
+          ],next() { this.current = (this.current + 1) % this.images.length; } }"
             x-init="setInterval(() => next(), 6000)"
           >
-            <!-- Slides -->
             <div class="relative h-64 w-full md:h-auto md:w-auto">
               <template x-for="(image, index) in images" :key="index">
                 <img
                   :src="`/inicio/${image}`"
-                  class="h-60 w-full rounded-2xl md:h-80 md:max-w-lg"
+                  class="h-60 w-full rounded-2xl border-2 border-gray-950 md:h-80 md:max-w-lg"
                   :class="index === current ? 'opacity-100' : 'opacity-0 absolute'"
                 />
               </template>
