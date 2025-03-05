@@ -10,11 +10,29 @@ export default {
         "green-nosotros": "#A9D18E",
         "orange-nosotros": "#F4B183",
         "blue-nosotros": "#0F98C2",
-        "purple-nosotros": "#7D557A",
+        "purple-nosotros": "#523851",
         "background-proser": "#595959",
+        "background-values": "#13467C",
+        "color-values": "#F78D1B",
+        "text-values": "#f6f0f7",
       },
       backgroundImage: {
         hero: "url(/fondo.jpg)",
+      },
+      keyframes: {
+        "slide-right": {
+          "0%": { opacity: "0", transform: "translateX(-200px)" },
+          "100%": { opacity: "1", transform: "translateX(0px)" },
+        },
+        "slide-left": {
+          "0%": { opacity: "0", transform: "translateX(200px)" },
+          "100%": { opacity: "1", transform: "translateX(0px)" },
+        },
+      },
+      animation: {
+        "slide-right": "slide-right 0.75s",
+        "slide-right-slow": "slide-right 1.25s",
+        "slide-left": "slide-left 0.75s",
       },
     },
   },
