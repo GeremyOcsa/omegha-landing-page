@@ -3,84 +3,232 @@
     "id": 1,
     "name": "Obra Demolición",
     "image": "/proyectos/proyectos001.jpg",
-    "description": "Demolition of the regional hospital, construction of the new Hospital II-2 in Tarapoto, including a contingency hospital in Banda de Shilcayo - San Martin - Peru."
+    "description": "Demolition of the regional hospital, construction of the new Hospital II-2 in Tarapoto, including a contingency hospital in Banda de Shilcayo - San Martin - Peru.",
+    "gallery": [
+      "/proyectos/proyectos001/001-01.jpg",
+      "/proyectos/proyectos001/001-02.jpg",
+      "/proyectos/proyectos001/001-03.jpg",
+      "/proyectos/proyectos001/001-04.jpg",
+      "/proyectos/proyectos001/001-05.jpg",
+      "/proyectos/proyectos001/001-06.jpg",
+      "/proyectos/proyectos001/001-07.jpg",
+      "/proyectos/proyectos001/001-08.jpg",
+      "/proyectos/proyectos001/001-09.jpg",
+      "/proyectos/proyectos001/001-10.jpg"
+    ]
   },
   {
     "id": 2,
     "name": "El Embrujo",
     "image": "/proyectos/proyectos002.jpg",
-    "description": "Project “El Embrujo, Design of a Shopping Center and Urbanization on 17 hectares of land”."
+    "description": "Project “El Embrujo, Design of a Shopping Center and Urbanization on 17 hectares of land”.",
+    "gallery": [
+      "/proyectos/proyectos002/002-01.jpg",
+      "/proyectos/proyectos002/002-02.jpg",
+      "/proyectos/proyectos002/002-03.jpg",
+      "/proyectos/proyectos002/002-04.jpg",
+      "/proyectos/proyectos002/002-05.jpg",
+      "/proyectos/proyectos002/002-06.jpg",
+      "/proyectos/proyectos002/002-07.jpg",
+      "/proyectos/proyectos002/002-08.jpg",
+      "/proyectos/proyectos002/002-09.jpg",
+      "/proyectos/proyectos002/002-10.jpg"
+    ]
   },
   {
     "id": 3,
     "name": "Obra Mejoramiento",
     "image": "/proyectos/proyectos003.jpg",
-    "description": "Improvement and Expansion of the Drinking Water and Sewage System of the City of Rioja - San Martin - Peru”."
+    "description": "Improvement and Expansion of the Drinking Water and Sewage System of the City of Rioja - San Martin - Peru”.",
+    "gallery": [
+      "/proyectos/proyectos003/003-01.jpg",
+      "/proyectos/proyectos003/003-02.jpg",
+      "/proyectos/proyectos003/003-03.jpg",
+      "/proyectos/proyectos003/003-04.jpg",
+      "/proyectos/proyectos003/003-05.jpg",
+      "/proyectos/proyectos003/003-06.jpg",
+      "/proyectos/proyectos003/003-07.jpg",
+      "/proyectos/proyectos003/003-08.jpg",
+      "/proyectos/proyectos003/003-09.jpg",
+      "/proyectos/proyectos003/003-10.jpg"
+    ]
   },
   {
     "id": 4,
     "name": "Consultoría",
     "image": "/proyectos/proyectos004.jpeg",
-    "description": "Consultancy “Detailed Engineering Project (PID) for Road Sections Nº 01 and 04 of the North Amazon Multimodal Axis” - IIRSA North - Peru."
+    "description": "Consultancy “Detailed Engineering Project (PID) for Road Sections Nº 01 and 04 of the North Amazon Multimodal Axis” - IIRSA North - Peru.",
+    "gallery": [
+      "/proyectos/proyectos004/004-01.jpg",
+      "/proyectos/proyectos004/004-02.jpg",
+      "/proyectos/proyectos004/004-03.jpg",
+      "/proyectos/proyectos004/004-04.jpg",
+      "/proyectos/proyectos004/004-05.jpeg",
+      "/proyectos/proyectos004/004-06.jpg",
+      "/proyectos/proyectos004/004-07.jpg",
+      "/proyectos/proyectos004/004-08.jpg",
+      "/proyectos/proyectos004/004-09.jpg",
+      "/proyectos/proyectos004/004-10.jpg"
+    ]
   },
   {
     "id": 5,
     "name": "Condominio Diosostenible Yori",
     "image": "/proyectos/proyectos005.jpg",
-    "description": "Design and Construction of the “Yori Biosustainable Condominium - San Martin - Peru”."
+    "description": "Design and Construction of the “Yori Biosustainable Condominium - San Martin - Peru”.",
+    "gallery": [
+      "/proyectos/proyectos005/005-01.jpg",
+      "/proyectos/proyectos005/005-02.jpg",
+      "/proyectos/proyectos005/005-03.jpg",
+      "/proyectos/proyectos005/005-04.jpg",
+      "/proyectos/proyectos005/005-05.jpg",
+      "/proyectos/proyectos005/005-06.jpg",
+      "/proyectos/proyectos005/005-07.jpg",
+      "/proyectos/proyectos005/005-08.jpg",
+      "/proyectos/proyectos005/005-09.jpg",
+      "/proyectos/proyectos005/005-10.jpg"
+    ]
   },
   {
     "id": 6,
     "name": "Consultoría",
     "image": "/proyectos/proyectos006.jpg",
-    "description": "Consultancy “Improvement of the Buenos Aires - Santa Catalina Neighborhood Road (access to Motilones Bridge) - Flor del Mayo, Left Bank of the Mayo River, Moyobamba - San Martin - Peru”."
+    "description": "Consultancy “Improvement of the Buenos Aires - Santa Catalina Neighborhood Road (access to Motilones Bridge) - Flor del Mayo, Left Bank of the Mayo River, Moyobamba - San Martin - Peru”.",
+    "gallery": [
+      "/proyectos/proyectos006/006-01.jpg",
+      "/proyectos/proyectos006/006-02.jpg",
+      "/proyectos/proyectos006/006-03.jpg",
+      "/proyectos/proyectos006/006-04.jpg",
+      "/proyectos/proyectos006/006-05.jpg",
+      "/proyectos/proyectos006/006-06.jpg",
+      "/proyectos/proyectos006/006-07.jpg"
+    ]
   },
   {
     "id": 7,
     "name": "Discoteca",
     "image": "/proyectos/proyectos007.jpg",
-    "description": "Design and Construction of Discotheque in the City of Iquitos - Loreto Region - Peru, of 02 floors."
+    "description": "Design and Construction of Discotheque in the City of Iquitos - Loreto Region - Peru, of 02 floors.",
+    "gallery": [
+      "/proyectos/proyectos007/007-01.jpg",
+      "/proyectos/proyectos007/007-02.jpg",
+      "/proyectos/proyectos007/007-03.jpg",
+      "/proyectos/proyectos007/007-04.jpg"
+    ]
   },
   {
     "id": 8,
     "name": "Prueba de Tecnología",
     "image": "/proyectos/proyectos008.jpeg",
-    "description": "Service “Testing of Roadway Technology with R-SOIL at the head of the Palmas del Espino Hangar - Santa Lucia - Tocache - Peru”."
+    "description": "Service “Testing of Roadway Technology with R-SOIL at the head of the Palmas del Espino Hangar - Santa Lucia - Tocache - Peru”.",
+    "gallery": [
+      "/proyectos/proyectos008/008-01.jpg",
+      "/proyectos/proyectos008/008-02.jpg",
+      "/proyectos/proyectos008/008-03.jpg",
+      "/proyectos/proyectos008/008-04.jpg",
+      "/proyectos/proyectos008/008-05.jpg",
+      "/proyectos/proyectos008/008-06.jpg",
+      "/proyectos/proyectos008/008-07.jpg",
+      "/proyectos/proyectos008/008-08.jpg",
+      "/proyectos/proyectos008/008-09.jpg",
+      "/proyectos/proyectos008/008-10.jpg"
+    ]
   },
   {
     "id": 9,
     "name": "Obra Mejoramiento",
     "image": "/proyectos/proyectos009.jpg",
-    "description": "“Improvement of Health Services at Hospital II-2 Cesar Garayar Garcia, Iquitos - Maynas- Loreto - Peru.”"
+    "description": "“Improvement of Health Services at Hospital II-2 Cesar Garayar Garcia, Iquitos - Maynas- Loreto - Peru.”",
+    "gallery": [
+      "/proyectos/proyectos009/009-01.jpg",
+      "/proyectos/proyectos009/009-02.jpg",
+      "/proyectos/proyectos009/009-03.jpg",
+      "/proyectos/proyectos009/009-04.jpg",
+      "/proyectos/proyectos009/009-05.jpg",
+      "/proyectos/proyectos009/009-06.jpg",
+      "/proyectos/proyectos009/009-07.jpg"
+    ]
   },
   {
     "id": 10,
     "name": "Proyecto de Ingeniería",
     "image": "/proyectos/Proyectos010.png",
-    "description": "“Detailed Engineering Project for the New Santa Toll on Road Network 4: Pativilca - Trujillo - Peru”."
+    "description": "“Detailed Engineering Project for the New Santa Toll on Road Network 4: Pativilca - Trujillo - Peru”.",
+    "gallery": [
+      "/proyectos/proyectos010/010-01.png",
+      "/proyectos/proyectos010/010-02.png",
+      "/proyectos/proyectos010/010-03.png",
+      "/proyectos/proyectos010/010-04.png",
+      "/proyectos/proyectos010/010-05.png",
+      "/proyectos/proyectos010/010-06.png",
+      "/proyectos/proyectos010/010-07.png",
+      "/proyectos/proyectos010/010-08.png",
+      "/proyectos/proyectos010/010-09.png"
+    ]
   },
   {
     "id": 11,
     "name": "Conjunto Residencial Suchiche",
     "image": "/proyectos/proyectos011.jpg",
-    "description": "Project “Suchiche Residential Complex”, 04 floors in the city of Tarapoto - San Martin - Peru."
+    "description": "Project “Suchiche Residential Complex”, 04 floors in the city of Tarapoto - San Martin - Peru.",
+    "gallery": [
+      "/proyectos/proyectos011/011-01.jpg",
+      "/proyectos/proyectos011/011-02.jpg",
+      "/proyectos/proyectos011/011-03.jpg",
+      "/proyectos/proyectos011/011-04.jpg",
+      "/proyectos/proyectos011/011-05.jpg",
+      "/proyectos/proyectos011/011-06.jpg",
+      "/proyectos/proyectos011/011-07.jpg",
+      "/proyectos/proyectos011/011-08.jpg",
+      "/proyectos/proyectos011/011-09.jpg",
+      "/proyectos/proyectos011/011-10.jpg"
+    ]
   },
   {
     "id": 12,
     "name": "Proyecto integrado del Sistema de Agua Potable",
     "image": "/proyectos/proyectos012.jpg",
-    "description": "“Integrated Project of the Potable Water and Sewage System of the Municipality of Bagua - Amazonas - Peru”."
+    "description": "“Integrated Project of the Potable Water and Sewage System of the Municipality of Bagua - Amazonas - Peru”.",
+    "gallery": [
+      "/proyectos/proyectos012/012-01.jpg",
+      "/proyectos/proyectos012/012-02.jpg",
+      "/proyectos/proyectos012/012-03.jpg"
+    ]
   },
   {
     "id": 13,
     "name": "Proyecto Residencial",
     "image": "/proyectos/proyectos013.jpg",
-    "description": "“Residential project, complex built on a 2,800 m2 lot approx.”"
+    "description": "“Residential project, complex built on a 2,800 m2 lot approx.”",
+    "gallery": [
+      "/proyectos/proyectos013/013-01.jpg",
+      "/proyectos/proyectos013/013-02.jpg",
+      "/proyectos/proyectos013/013-03.jpg",
+      "/proyectos/proyectos013/013-04.jpg",
+      "/proyectos/proyectos013/013-05.jpg",
+      "/proyectos/proyectos013/013-06.jpg",
+      "/proyectos/proyectos013/013-07.jpg",
+      "/proyectos/proyectos013/013-08.jpg",
+      "/proyectos/proyectos013/013-09.jpg",
+      "/proyectos/proyectos013/013-10.jpg"
+    ]
   },
   {
     "id": 14,
     "name": "Mausoleo Familiar",
     "image": "/proyectos/proyectos014.JPG",
-    "description": "“Design and construction of a family mausoleum in Tingo de Saposoa - San Martin - Peru”."
+    "description": "“Design and construction of a family mausoleum in Tingo de Saposoa - San Martin - Peru”.",
+    "gallery": [
+      "/proyectos/proyectos014/014-01.jpg",
+      "/proyectos/proyectos014/014-02.jpg",
+      "/proyectos/proyectos014/014-03.jpg",
+      "/proyectos/proyectos014/014-04.jpg",
+      "/proyectos/proyectos014/014-05.jpg",
+      "/proyectos/proyectos014/014-06.jpg",
+      "/proyectos/proyectos014/014-07.jpg",
+      "/proyectos/proyectos014/014-08.jpg",
+      "/proyectos/proyectos014/014-09.jpg",
+      "/proyectos/proyectos014/014-10.jpg"
+    ]
   }
 ]
