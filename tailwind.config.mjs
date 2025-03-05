@@ -32,7 +32,7 @@ export default {
       animation: {
         "slide-right": "slide-right 0.75s",
         "slide-right-slow": "slide-right 1.25s",
-        "slide-left": "slide-left 0.75s",
+        "slide-left": "slide-left 1s",
       },
     },
   },
