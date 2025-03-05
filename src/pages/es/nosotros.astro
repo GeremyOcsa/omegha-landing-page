@@ -2,15 +2,11 @@
 import Layout from "@layouts/Layout.astro";
 import type { languageList } from "src/i18n/ui";
 import { useTranslations } from "src/i18n/utils";
+import { Icon } from "astro-icon/components";
 
 const valores = [
-  ["La Honestidad.", "El Orden.", "La Sencillez.", "La Vocación Profesional."],
-  [
-    "La Responsabilidad.",
-    "La Disciplina.",
-    "La Precisión.",
-    "La constante innovación.",
-  ],
+  ["Honestidad", "Orden", "Sencillez", "Vocación Profesional"],
+  ["Responsabilidad", "Disciplina", "Precisión", "Constante Innovación"],
 ];
 
 const currentLang = Astro.currentLocale || "es";
@@ -18,13 +14,13 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <Layout title="Nosotros">
-  <section class="bg-hero bg-fixed bg-center bg-no-repeat">
+  <section class="bg-hero bg-fixed bg-center bg-no-repeat pb-10">
     <div class="mx-auto min-h-screen max-w-5xl p-4">
       <div
         class="flex flex-col gap-3 rounded-2xl bg-white-general bg-opacity-60 p-5 md:gap-6"
       >
         <article class="prose max-w-none text-sm lg:text-base">
-          <h1 class="uppercase md:pl-5">{t("about.title")}</h1>
+          <h1 class="text-center uppercase">{t("about.title")}</h1>
           <div class="flex flex-col justify-center gap-4 md:flex-row">
             <div class="text-justify text-black md:mt-4">
               <p set:html={t("about.firstP")} />
@@ -33,7 +29,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               </p>
             </div>
             <img
-              class="h-72 w-auto rounded-2xl md:self-center"
+              class="h-72 w-auto rounded-2xl border-2 border-gray-950 md:self-center"
               src="/nosotros/nosotros001.jpg"
               alt="Omegha Nosotros"
             />
@@ -49,7 +45,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               </p>
             </div>
             <img
-              class="h-48 w-auto rounded-2xl md:h-auto md:w-96 lg:h-72 lg:w-full"
+              class="h-48 w-auto rounded-2xl border-2 border-gray-950 md:h-auto md:w-96 lg:h-72 lg:w-full"
               src="/nosotros/nosotros002.jpg"
               alt="Omegha Mision"
             />
@@ -65,27 +61,47 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               </p>
             </div>
             <img
-              class="h-48 w-auto rounded-2xl md:h-auto md:w-96 lg:h-72 lg:w-full"
+              class="h-48 w-auto rounded-2xl border-2 border-gray-950 md:h-auto md:w-96 lg:h-72 lg:w-full"
               src="/nosotros/nosotros003.jpg"
               alt="Omegha Vision"
             />
           </div>
         </article>
+      </div>
+    </div>
 
+    <div class="bg-background-values bg-opacity-90 py-16">
+      <div class="mx-auto max-w-5xl">
         <article
-          class="prose max-w-none text-sm text-black marker:text-black lg:text-base"
+          class="prose flex max-w-none flex-col items-center space-y-16 pb-8 text-center text-sm text-slate-100 marker:text-black lg:text-lg"
         >
-          <h2 class="uppercase text-blue-900 md:pl-5">{t("values.title")}</h2>
-          <p set:html={t("values.des")} />
-          <ol type="a">
-            <li>{t("values.liF")}</li>
-            <li>{t("values.liP")}</li>
-          </ol>
-          <p>
+          <div>
+            <h2 class="uppercase text-color-values">
+              {t("values.title")}
+            </h2>
+            <p class="px-2" set:html={t("values.des")} />
+          </div>
+          <div class="flex flex-col md:flex-row md:space-x-12">
+            <div class="flex w-60 flex-col items-center text-center">
+              <Icon name="heart" class="text-4xl text-color-values" />
+              <p class="font-semibold">{t("values.liF")}</p>
+            </div>
+            <div class="flex w-60 flex-col items-center text-center">
+              <Icon name="heart" class="text-4xl text-color-values" />
+              <p class="font-semibold">{t("values.liP")}</p>
+            </div>
+          </div>
+          <p class="px-2 text-center md:w-[720px]">
             {t("values.para")}
           </p>
         </article>
+      </div>
+    </div>
 
+    <div class="mx-auto max-w-5xl p-4">
+      <div
+        class="flex flex-col gap-3 rounded-2xl bg-white-general bg-opacity-60 p-5 md:gap-6"
+      >
         <article
           class="prose max-w-none rounded-2xl bg-blue-nosotros bg-opacity-40 p-3"
         >
@@ -101,46 +117,38 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               </p>
             </div>
             <img
-              class="not-prose h-48 w-auto rounded-2xl md:h-auto md:w-96 lg:h-72"
+              class="not-prose h-48 w-auto rounded-2xl border-2 border-gray-950 md:h-auto md:w-96 lg:h-72"
               src="/nosotros/valores001.jpg"
               alt="Omegha Valores"
             />
           </div>
         </article>
+      </div>
+    </div>
 
-        <article
-          class="max-w-none rounded-2xl bg-purple-nosotros bg-opacity-40 p-3"
-        >
-          <div class="flex flex-col-reverse justify-center gap-4 md:flex-row">
+    <div class="bg-purple-nosotros bg-opacity-40 py-20">
+      <div class="mx-auto max-w-5xl">
+        <article class="flex flex-col-reverse justify-center gap-4 md:flex-row">
+          <div
+            class="space-y-16 p-1 text-justify text-sm text-white md:p-0 lg:text-lg"
+          >
+            <p class="prose text-center text-sm text-white lg:text-lg">
+              {t("values.firstS")}
+            </p>
+            <p class="my-2 text-center font-semibold">{t("values.secondS")}</p>
             <div
-              class="p-1 text-justify text-sm text-black md:p-0 lg:text-base"
+              class="mx-auto my-4 flex w-72 flex-row justify-center gap-4 text-left md:w-full"
             >
-              <p class="prose text-sm text-black lg:text-base">
-                {t("values.firstS")}
-              </p>
-              <p class="my-2">{t("values.secondS")}</p>
-              <div class="my-4 flex flex-row gap-4 text-left">
-                {
-                  valores.map((grupo) => (
-                    <ul class="list-none">
-                      {grupo.map((valor) => (
-                        <li class="before:mr-1 before:content-['✓']">
-                          {valor}
-                        </li>
-                      ))}
-                    </ul>
-                  ))
-                }
-              </div>
-              <p class="prose text-sm text-black lg:text-base">
-                {t("values.thirdS")}
-              </p>
+              {
+                valores.map((grupo) => (
+                  <ul class="list-none space-y-4 font-semibold">
+                    {grupo.map((valor) => (
+                      <li class="before:mr-1 before:content-['✔']">{valor}</li>
+                    ))}
+                  </ul>
+                ))
+              }
             </div>
-            <img
-              class="h-48 w-auto rounded-2xl md:h-auto md:w-96 lg:h-72"
-              src="/nosotros/valores002.jpg"
-              alt="Omegha Valores"
-            />
           </div>
         </article>
       </div>
