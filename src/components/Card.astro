@@ -1,4 +1,6 @@
 ---
+import Gallery from "./Gallery.astro";
+
 interface CardProps {
   title: string;
   description: string;
@@ -9,16 +11,18 @@ interface CardProps {
 const { title, description, image, position } = Astro.props;
 ---
 
-<div class="relative overflow-hidden rounded-2xl shadow-lg group">
+<div
+  class="group relative overflow-hidden rounded-2xl border-2 border-gray-950 shadow-lg"
+>
   <div
-    class="w-full h-full transition-transform duration-300 group-hover:scale-110"
+    class="h-full w-full rounded-2xl transition-transform duration-300 group-hover:scale-110"
   >
-    <img src={image} alt={title} class="w-full h-full object-cover" />
+    <img src={image} alt={title} class="h-full w-full object-cover" />
   </div>
   <div
     class=`absolute inset-0 p-6 flex flex-col ${position} opacity-0 transition-opacity duration-300 group-hover:opacity-100 hover:bg-background-proser hover:bg-opacity-60 hover:cursor-pointer`
   >
-    <p class="text-white text-sm text-center text-pretty font-semibold">
+    <p class="text-pretty text-center text-sm font-semibold text-white">
       {description}
     </p>
   </div>
