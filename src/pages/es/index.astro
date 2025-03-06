@@ -9,21 +9,23 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <Layout title="Inicio">
-  <section class="bg-hero bg-cover bg-fixed bg-no-repeat">
+  <section class="bg-hero bg-cover bg-scroll bg-no-repeat md:bg-fixed">
     <div class="mx-auto min-h-screen p-4 lg:max-w-5xl">
       <article
         class="prose max-w-none rounded-2xl bg-white-general bg-opacity-60 p-5 text-sm text-black lg:text-base"
       >
-        <h1 class="uppercase md:animate-slide-right md:pl-5">
+        <h1
+          class="md:animate-slide-right-desktop animate-slide-right uppercase md:pl-5"
+        >
           {t("index.title")}
         </h1>
         <div class="flex flex-col md:flex-row md:gap-3">
           <div class="mt-4 text-justify text-black md:w-1/2">
             <p
-              class="md:animate-slide-right-slow"
+              class="md:animate-slide-right-desktop animate-slide-right"
               set:html={t("index.firstP")}
             />
-            <p class="md:animate-slide-right-slow">
+            <p class="md:animate-slide-right-desktop animate-slide-right">
               {t("index.secondP")}
             </p>
           </div>
