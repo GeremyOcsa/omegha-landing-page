@@ -14,22 +14,27 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <Layout title="About Us">
-  <section class="bg-hero bg-fixed bg-center bg-no-repeat pb-10">
+  <section class="bg-hero bg-cover bg-fixed bg-no-repeat pb-10">
     <div class="mx-auto min-h-screen max-w-5xl p-4">
       <div
         class="flex flex-col gap-3 rounded-2xl bg-white-general bg-opacity-60 p-5 md:gap-6"
       >
         <article class="prose max-w-none text-sm lg:text-base">
-          <h1 class="text-center uppercase">{t("about.title")}</h1>
+          <h1 class="text-center uppercase">
+            {t("about.title")}
+          </h1>
           <div class="flex flex-col justify-center gap-4 md:flex-row">
             <div class="text-justify text-black md:mt-4">
-              <p set:html={t("about.firstP")} />
-              <p>
+              <p
+                class="animate-slide-right-slow"
+                set:html={t("about.firstP")}
+              />
+              <p class="animate-slide-right-slow">
                 {t("about.secondP")}
               </p>
             </div>
             <img
-              class="h-72 w-auto rounded-2xl border-2 border-gray-950 md:self-center"
+              class="h-72 w-auto animate-slide-left rounded-2xl border-2 border-gray-950 md:self-center"
               src="/nosotros/nosotros001.jpg"
               alt="Omegha Nosotros"
             />
@@ -38,14 +43,16 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 
         <article class="rounded-2xl bg-green-nosotros bg-opacity-40 p-5">
           <div class="flex flex-col justify-center gap-4 md:flex-row-reverse">
-            <div class="prose text-justify text-sm text-black lg:text-base">
+            <div
+              class="slide-left prose text-justify text-sm text-black opacity-0 lg:text-base"
+            >
               <h2 class="pl-5 uppercase text-blue-900">{t("mission.title")}</h2>
               <p>
                 {t("mission.des")}
               </p>
             </div>
             <img
-              class="h-48 w-auto rounded-2xl border-2 border-gray-950 md:h-auto md:w-96 lg:h-72 lg:w-full"
+              class="slide-right h-48 w-auto rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-72 lg:w-full"
               src="/nosotros/nosotros002.jpg"
               alt="Omegha Mision"
             />
@@ -54,14 +61,16 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 
         <article class="rounded-2xl bg-orange-nosotros bg-opacity-40 p-4">
           <div class="flex flex-col justify-center gap-4 md:flex-row">
-            <div class="prose text-justify text-sm text-black lg:text-base">
+            <div
+              class="slide-right prose text-justify text-sm text-black opacity-0 lg:text-base"
+            >
               <h2 class="pl-5 uppercase text-blue-900">{t("vision.title")}</h2>
               <p>
                 {t("vision.des")}
               </p>
             </div>
             <img
-              class="h-48 w-auto rounded-2xl border-2 border-gray-950 md:h-auto md:w-96 lg:h-72 lg:w-full"
+              class="slide-left h-48 w-auto rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-72 lg:w-full"
               src="/nosotros/nosotros003.jpg"
               alt="Omegha Vision"
             />
@@ -76,22 +85,26 @@ const t = useTranslations(currentLang as keyof typeof languageList);
           class="prose flex max-w-none flex-col items-center space-y-16 pb-8 text-center text-sm text-slate-100 marker:text-black lg:text-lg"
         >
           <div>
-            <h2 class="uppercase text-color-values">
+            <h2 class="slide-top uppercase text-color-values opacity-0">
               {t("values.title")}
             </h2>
-            <p class="px-2" set:html={t("values.des")} />
+            <p class="slide-top px-2 opacity-0" set:html={t("values.des")} />
           </div>
           <div class="flex flex-col md:flex-row md:space-x-12">
-            <div class="flex w-60 flex-col items-center text-center">
+            <div
+              class="slide-right flex w-60 flex-col items-center text-center opacity-0"
+            >
               <Icon name="heart" class="text-4xl text-color-values" />
               <p class="font-semibold">{t("values.liF")}</p>
             </div>
-            <div class="flex w-60 flex-col items-center text-center">
+            <div
+              class="slide-left flex w-60 flex-col items-center text-center opacity-0"
+            >
               <Icon name="heart" class="text-4xl text-color-values" />
               <p class="font-semibold">{t("values.liP")}</p>
             </div>
           </div>
-          <p class="px-2 text-center md:w-[720px]">
+          <p class="slide-top px-2 text-center opacity-0 md:w-[720px]">
             {t("values.para")}
           </p>
         </article>
@@ -108,7 +121,9 @@ const t = useTranslations(currentLang as keyof typeof languageList);
           <div
             class="flex flex-col-reverse justify-center gap-4 md:flex-row-reverse"
           >
-            <div class="text-justify text-sm text-black lg:text-base">
+            <div
+              class="slide-left text-justify text-sm text-black opacity-0 lg:text-base"
+            >
               <p>
                 {t("values.firstI")}
               </p>
@@ -117,7 +132,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               </p>
             </div>
             <img
-              class="not-prose h-48 w-auto rounded-2xl border-2 border-gray-950 md:h-auto md:w-96 lg:h-72"
+              class="slide-right not-prose h-48 w-auto rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-72"
               src="/nosotros/valores001.jpg"
               alt="Omegha Valores"
             />
@@ -132,20 +147,25 @@ const t = useTranslations(currentLang as keyof typeof languageList);
           <div
             class="space-y-16 p-1 text-justify text-sm text-white md:p-0 lg:text-lg"
           >
-            <p class="prose text-center text-sm text-white lg:text-lg">
+            <p
+              class="slide-top prose text-center text-sm text-white opacity-0 lg:text-lg"
+            >
               {t("values.firstS")}
             </p>
-            <p class="my-2 text-center font-semibold">{t("values.secondS")}</p>
-            <div
-              class="mx-auto my-4 flex w-72 flex-row justify-center gap-4 text-left md:w-full"
-            >
+            <p class="slide-top my-2 text-center font-semibold opacity-0">
+              {t("values.secondS")}
+            </p>
+            <div class="ml-8 grid grid-cols-2 lg:ml-32">
               {
-                valores.map((grupo) => (
-                  <ul class="list-none space-y-4 font-semibold">
-                    {grupo.map((valor) => (
-                      <li class="before:mr-1 before:content-['✔']">{valor}</li>
-                    ))}
-                  </ul>
+                valores[0].map((valor, i) => (
+                  <>
+                    <li class="delay-${i * 300} slide-right mt-2 list-none opacity-0 before:mr-1 before:content-['✔']">
+                      {valor}
+                    </li>
+                    <li class="delay-${i * 300} slide-left mt-2 list-none opacity-0 before:mr-1 before:content-['✔']">
+                      {valores[1][i]}
+                    </li>
+                  </>
                 ))
               }
             </div>
@@ -155,3 +175,32 @@ const t = useTranslations(currentLang as keyof typeof languageList);
     </div>
   </section>
 </Layout>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains("slide-left")) {
+              entry.target.classList.add("animate-slide-left");
+            } else if (entry.target.classList.contains("slide-right")) {
+              entry.target.classList.add("animate-slide-right");
+            } else if (entry.target.classList.contains("slide-top")) {
+              entry.target.classList.add("animate-slide-top");
+            }
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const leftElement = document.querySelectorAll(".slide-left");
+    const rightElement = document.querySelectorAll(".slide-right");
+    const topElement = document.querySelectorAll(".slide-top");
+
+    leftElement.forEach((el) => observer.observe(el));
+    rightElement.forEach((el) => observer.observe(el));
+    topElement.forEach((el) => observer.observe(el));
+  });
+</script>
