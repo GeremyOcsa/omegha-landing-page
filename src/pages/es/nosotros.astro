@@ -208,5 +208,10 @@ const t = useTranslations(currentLang as keyof typeof languageList);
       .forEach((el) => observer.observe(el));
   }
   document.addEventListener("astro:after-swap", initAnimations);
-  document.addEventListener("astro:page-load", initAnimations);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("astro:page-load", initAnimations);
+  } else {
+    initAnimations();
+  }
 </script>

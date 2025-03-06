@@ -24,7 +24,7 @@ export default function Carousel() {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper h-full w-full md:animate-slide-left"
+        className="mySwiper md:animate-slide-left-desktop h-full w-full animate-slide-left"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
