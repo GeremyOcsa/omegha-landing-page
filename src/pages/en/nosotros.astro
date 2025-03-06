@@ -177,15 +177,17 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 </Layout>
 
 <script>
-  document.addEventListener("astro:page-load", () => {
+  function initAnimations() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             if (entry.target.classList.contains("slide-left")) {
               entry.target.classList.add("animate-slide-left");
+              entry.target.classList.add("md:animate-slide-left-desktop");
             } else if (entry.target.classList.contains("slide-right")) {
               entry.target.classList.add("animate-slide-right");
+              entry.target.classList.add("md:animate-slide-right-desktop");
             } else if (entry.target.classList.contains("slide-top")) {
               entry.target.classList.add("animate-slide-top");
             }
@@ -194,13 +196,15 @@ const t = useTranslations(currentLang as keyof typeof languageList);
       },
       { threshold: 0.2 }
     );
+    document
+      .querySelectorAll(".slide-left, .slide-right, .slide-top")
+      .forEach((el) => observer.observe(el));
+  }
+  document.addEventListener("astro:after-swap", initAnimations);
 
-    const leftElement = document.querySelectorAll(".slide-left");
-    const rightElement = document.querySelectorAll(".slide-right");
-    const topElement = document.querySelectorAll(".slide-top");
-
-    leftElement.forEach((el) => observer.observe(el));
-    rightElement.forEach((el) => observer.observe(el));
-    topElement.forEach((el) => observer.observe(el));
-  });
+  if (document.readyState === "loading") {
+    document.addEventListener("astro:page-load", initAnimations);
+  } else {
+    initAnimations();
+  }
 </script>
