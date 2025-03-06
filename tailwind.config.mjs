@@ -21,18 +21,23 @@ export default {
       },
       keyframes: {
         "slide-right": {
-          "0%": { opacity: "0", transform: "translateX(-200px)" },
+          "0%": { opacity: "0", transform: "translateX(-150px)" },
           "100%": { opacity: "1", transform: "translateX(0px)" },
         },
         "slide-left": {
-          "0%": { opacity: "0", transform: "translateX(200px)" },
+          "0%": { opacity: "0", transform: "translateX(150px)" },
           "100%": { opacity: "1", transform: "translateX(0px)" },
+        },
+        "slide-top": {
+          "0%": { opacity: "0", transform: "translateY(150px)" },
+          "100%": { opacity: "1", transform: "translateY(0px)" },
         },
       },
       animation: {
-        "slide-right": "slide-right 0.75s",
-        "slide-right-slow": "slide-right 1.25s",
-        "slide-left": "slide-left 1s",
+        "slide-right": "slide-right 0.75s ease-out forwards",
+        "slide-right-slow": "slide-right 1.25s ease-out forwards",
+        "slide-left": "slide-left 1s ease-out forwards",
+        "slide-top": "slide-top 1s ease-out forwards",
       },
     },
   },
