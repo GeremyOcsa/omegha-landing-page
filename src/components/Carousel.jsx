@@ -9,7 +9,7 @@ import img3 from "../assets/slider/inicio003.jpg";
 import img4 from "../assets/slider/inicio004.jpg";
 import img5 from "../assets/slider/inicio005.jpg";
 
-const images = [img1.src, img2.src, img3.src, img4.src, img5.src];
+const images = [img3.src, img1.src, img2.src, img4.src, img5.src];
 
 import { Autoplay } from "swiper/modules";
 
@@ -24,7 +24,7 @@ export default function Carousel() {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper md:animate-slide-left-desktop h-full w-full animate-slide-left"
+        className="mySwiper h-full w-full animate-slide-left md:animate-slide-left-desktop"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
