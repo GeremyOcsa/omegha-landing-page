@@ -4,6 +4,10 @@ import type { languageList } from "src/i18n/ui";
 import { useTranslations } from "src/i18n/utils";
 import { Icon } from "astro-icon/components";
 
+import img1 from "src/assets/nosotros/01.webp";
+import img2 from "src/assets/nosotros/02.webp";
+import img3 from "src/assets/nosotros/03.webp";
+
 const valores = [
   ["Honestidad", "Orden", "Sencillez", "Vocación Profesional"],
   ["Responsabilidad", "Disciplina", "Precisión", "Constante Innovación"],
@@ -14,13 +18,13 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <Layout title="Nosotros">
-  <section class="bg-hero bg-cover bg-scroll bg-no-repeat pb-10 md:bg-fixed">
+  <section class="bg-hero bg-cover bg-scroll bg-no-repeat pb-40 md:bg-fixed">
     <div class="mx-auto min-h-screen max-w-5xl p-4">
       <div
         class="flex flex-col gap-3 rounded-2xl bg-white-general bg-opacity-60 p-5 md:gap-6"
       >
         <article class="prose max-w-none text-sm lg:text-base">
-          <h1 class="text-center uppercase">
+          <h1 class="uppercase text-blue-900 md:pl-5">
             {t("about.title")}
           </h1>
           <div class="flex flex-col justify-center gap-4 md:flex-row">
@@ -35,7 +39,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
             </div>
             <img
               class="h-72 w-auto animate-slide-left rounded-2xl border-2 border-gray-950 md:animate-slide-left-desktop md:self-center"
-              src="/nosotros/nosotros001.jpg"
+              src={"/nosotros/nosotros001.jpg"}
               alt="Omegha Nosotros"
             />
           </div>
@@ -52,8 +56,8 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               </p>
             </div>
             <img
-              class="slide-right h-48 w-auto rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-72 lg:w-full"
-              src="/nosotros/nosotros002.jpg"
+              class="slide-right h-48 w-full rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-72 lg:w-full"
+              src={img1.src}
               alt="Omegha Mision"
             />
           </div>
@@ -70,8 +74,8 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               </p>
             </div>
             <img
-              class="slide-left invisible h-48 w-auto rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-72 lg:w-full"
-              src="/nosotros/nosotros003.jpg"
+              class="slide-left invisible h-48 w-full rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-[290px] lg:w-full"
+              src={img2.src}
               alt="Omegha Vision"
             />
           </div>
@@ -79,8 +83,8 @@ const t = useTranslations(currentLang as keyof typeof languageList);
       </div>
     </div>
 
-    <div class="bg-background-values bg-opacity-90 py-16 md:py-6">
-      <div class="mx-auto max-w-5xl">
+    <div class="bg-background-values bg-opacity-90 px-5 py-16 md:py-6">
+      <div class="mx-auto max-w-5xl rounded-2xl border-4 border-gray-950">
         <article
           class="prose flex max-w-none flex-col items-center space-y-16 pb-8 text-center text-sm text-slate-100 marker:text-black lg:text-lg"
         >
@@ -137,7 +141,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               </p>
             </div>
             <img
-              class="slide-right not-prose h-48 w-auto rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-72"
+              class="slide-right not-prose h-48 w-auto rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-72 lg:w-full"
               src="/nosotros/valores001.jpg"
               alt="Omegha Valores"
             />
@@ -146,30 +150,28 @@ const t = useTranslations(currentLang as keyof typeof languageList);
       </div>
     </div>
 
-    <div class="bg-purple-nosotros bg-opacity-40 py-20 md:py-10">
+    <div class="bg-purple-nosotros bg-opacity-40 py-8 md:py-10">
       <div class="mx-auto max-w-5xl">
-        <article class="flex flex-col-reverse justify-center gap-4 md:flex-row">
-          <div
-            class="space-y-16 p-1 text-justify text-sm text-white md:p-0 lg:text-lg"
-          >
+        <article
+          class="flex flex-col-reverse justify-center gap-4 p-5 md:flex-row"
+        >
+          <div class="p-1 text-justify text-sm text-white md:p-0 lg:text-lg">
             <p
-              class="slide-top prose invisible text-center text-sm text-white opacity-0 lg:text-lg"
+              class="slide-top prose text-sm text-white opacity-0 lg:text-base"
             >
               {t("values.firstS")}
             </p>
-            <p
-              class="slide-top invisible my-2 text-center font-semibold opacity-0"
-            >
+            <p class="slide-top my-2 font-semibold opacity-0 lg:text-base">
               {t("values.secondS")}
             </p>
-            <div class="ml-8 grid grid-cols-2 lg:ml-32">
+            <div class="ml-8 grid grid-cols-2 gap-1 md:ml-0 lg:text-base">
               {
                 valores[0].map((valor, i) => (
                   <>
-                    <li class="delay-${i * 300} slide-right mt-2 list-none text-left opacity-0 before:mr-1 before:content-['✔']">
+                    <li class="slide-right mt-2 list-none text-left opacity-0 delay-300 before:mr-1 before:content-['✔']">
                       {valor}
                     </li>
-                    <li class="delay-${i * 300} slide-left mt-2 list-none text-left opacity-0 before:mr-1 before:content-['✔']">
+                    <li class="slide-left mt-2 list-none text-left opacity-0 delay-300 before:mr-1 before:content-['✔']">
                       {valores[1][i]}
                     </li>
                   </>
@@ -177,6 +179,11 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               }
             </div>
           </div>
+          <img
+            class="slide-left h-48 w-auto rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-80 lg:w-full"
+            src={img3.src}
+            alt="Omegha Valores"
+          />
         </article>
       </div>
     </div>
