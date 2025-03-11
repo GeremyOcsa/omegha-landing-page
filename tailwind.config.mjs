@@ -15,9 +15,14 @@ export default {
         "background-values": "#13467C",
         "color-values": "#F78D1B",
         "text-values": "#f6f0f7",
+        "box-bg": "#E6E6E6",
       },
       backgroundImage: {
         hero: "url(/fondo.jpg)",
+        header: "url(/header/header.png)",
+        btnr: "url(/header/btnr.png)",
+        fondo: "url(/header/fondo_btnr.png)",
+        li_green: "url(/header/btnr_over.png)",
       },
       keyframes: {
         "slide-right": {
