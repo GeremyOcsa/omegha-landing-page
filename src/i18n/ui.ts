@@ -10,7 +10,7 @@ export const labels = {
     "nav.about": "Nosotros",
     "nav.enginnering": "Ingeniería",
     "nav.projects": "Proyectos",
-    "nav.service": "Servicio",
+    "nav.service": "Servicios",
     "nav.contact": "Contáctenos",
     // Inicio
     "index.title": "Sean Bienvenidos",
