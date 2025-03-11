@@ -15,17 +15,17 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         class="prose max-w-none rounded-2xl bg-white-general bg-opacity-60 p-5 text-sm text-black lg:text-base"
       >
         <h1
-          class="md:animate-slide-right-desktop animate-slide-right uppercase md:pl-5"
+          class="animate-slide-right uppercase text-blue-900 md:animate-slide-right-desktop md:pl-5"
         >
           {t("index.title")}
         </h1>
         <div class="flex flex-col md:flex-row md:gap-3">
           <div class="mt-4 text-justify text-black md:w-1/2">
             <p
-              class="md:animate-slide-right-desktop animate-slide-right"
+              class="animate-slide-right md:animate-slide-right-desktop"
               set:html={t("index.firstP")}
             />
-            <p class="md:animate-slide-right-desktop animate-slide-right">
+            <p class="animate-slide-right md:animate-slide-right-desktop">
               {t("index.secondP")}
             </p>
           </div>
