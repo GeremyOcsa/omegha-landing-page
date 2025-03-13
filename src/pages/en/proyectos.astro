@@ -1,5 +1,6 @@
 ---
 import GalleryEn from "@components/GalleryEn.astro";
+import PreFooter from "@components/PreFooter.astro";
 import Layout from "@layouts/Layout.astro";
 import type { languageList } from "src/i18n/ui";
 import { useTranslations } from "src/i18n/utils";
@@ -9,8 +10,8 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <Layout title="Projects">
-  <section class="bg-hero bg-cover bg-scroll bg-no-repeat pb-40 md:bg-fixed">
-    <div class="mx-auto min-h-screen max-w-5xl p-4">
+  <section class="bg-hero bg-cover bg-center bg-no-repeat pb-5 md:bg-fixed">
+    <div class="mx-auto min-h-screen max-w-5xl p-4 pb-40">
       <div class="rounded-2xl bg-white-general bg-opacity-60 p-5">
         <div
           class="prose max-w-none pb-8 text-justify text-sm text-black lg:text-base"
@@ -26,5 +27,6 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         </div>
       </div>
     </div>
+    <PreFooter />
   </section>
 </Layout>
