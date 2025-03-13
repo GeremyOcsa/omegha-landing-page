@@ -6,7 +6,7 @@ import { Icon } from "astro-icon/components";
 
 import img1 from "src/assets/nosotros/01.webp";
 import img2 from "src/assets/nosotros/02.webp";
-import img3 from "src/assets/nosotros/03.webp";
+import PreFooter from "@components/PreFooter.astro";
 
 const valores = [
   ["Honestidad", "Orden", "Sencillez", "Vocación Profesional"],
@@ -18,7 +18,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <Layout title="Nosotros">
-  <section class="bg-hero bg-cover bg-scroll bg-no-repeat pb-40 md:bg-fixed">
+  <section class="bg-hero bg-cover bg-center bg-no-repeat pb-5 md:bg-fixed">
     <div class="mx-auto min-h-screen max-w-5xl p-4">
       <div
         class="flex flex-col gap-3 rounded-2xl bg-white-general bg-opacity-60 p-5 md:gap-6"
@@ -81,46 +81,48 @@ const t = useTranslations(currentLang as keyof typeof languageList);
           </div>
         </article>
       </div>
-    </div>
 
-    <div class="bg-background-values bg-opacity-90 px-5 py-16 md:py-6">
-      <div class="mx-auto max-w-5xl rounded-2xl border-4 border-gray-950">
-        <article
-          class="prose flex max-w-none flex-col items-center space-y-16 pb-8 text-center text-sm text-slate-100 marker:text-black lg:text-lg"
-        >
-          <div>
-            <h2
-              class="slide-top invisible uppercase text-color-values opacity-0"
-            >
-              {t("values.title")}
-            </h2>
-            <p
-              class="slide-top invisible px-2 opacity-0"
-              set:html={t("values.des")}
-            />
-          </div>
-          <div class="flex flex-col md:flex-row md:space-x-12">
-            <div
-              class="slide-right invisible flex w-60 flex-col items-center text-center opacity-0"
-            >
-              <Icon name="heart" class="text-4xl text-color-values" />
-              <p class="font-semibold">{t("values.liF")}</p>
+      <div
+        class="mt-8 rounded-2xl bg-background-values bg-opacity-90 px-5 py-16 md:py-6"
+      >
+        <div class="mx-auto max-w-5xl">
+          <article
+            class="prose flex max-w-none flex-col items-center space-y-16 pb-8 text-center text-sm text-slate-100 marker:text-black lg:text-lg"
+          >
+            <div>
+              <h2
+                class="slide-top invisible uppercase text-color-values opacity-0"
+              >
+                {t("values.title")}
+              </h2>
+              <p
+                class="slide-top invisible px-2 opacity-0"
+                set:html={t("values.des")}
+              />
             </div>
-            <div
-              class="slide-left invisible flex w-60 flex-col items-center text-center opacity-0"
-            >
-              <Icon name="heart" class="text-4xl text-color-values" />
-              <p class="font-semibold">{t("values.liP")}</p>
+            <div class="flex flex-col md:flex-row md:space-x-12">
+              <div
+                class="slide-right invisible flex w-60 flex-col items-center text-center opacity-0"
+              >
+                <Icon name="heart" class="text-4xl text-color-values" />
+                <p class="font-semibold">{t("values.liF")}</p>
+              </div>
+              <div
+                class="slide-left invisible flex w-60 flex-col items-center text-center opacity-0"
+              >
+                <Icon name="heart" class="text-4xl text-color-values" />
+                <p class="font-semibold">{t("values.liP")}</p>
+              </div>
             </div>
-          </div>
-          <p class="slide-top px-2 text-center opacity-0 md:w-[720px]">
-            {t("values.para")}
-          </p>
-        </article>
+            <p class="slide-top px-2 text-center opacity-0 md:w-[720px]">
+              {t("values.para")}
+            </p>
+          </article>
+        </div>
       </div>
     </div>
 
-    <div class="mx-auto max-w-5xl p-4">
+    <div class="mx-auto max-w-5xl p-4 pb-40">
       <div
         class="flex flex-col gap-3 rounded-2xl bg-white-general bg-opacity-60 p-5 md:gap-6"
       >
@@ -147,46 +149,49 @@ const t = useTranslations(currentLang as keyof typeof languageList);
             />
           </div>
         </article>
-      </div>
-    </div>
 
-    <div class="bg-purple-nosotros bg-opacity-40 py-8 md:py-10">
-      <div class="mx-auto max-w-5xl">
-        <article
-          class="flex flex-col-reverse justify-center gap-4 p-5 md:flex-row"
-        >
-          <div class="p-1 text-justify text-sm text-white md:p-0 lg:text-lg">
-            <p
-              class="slide-top prose text-sm text-white opacity-0 lg:text-base"
+        <div class="rounded-xl bg-purple-nosotros bg-opacity-40">
+          <div class="mx-auto max-w-5xl">
+            <article
+              class="flex flex-col-reverse justify-center gap-4 p-5 md:flex-row"
             >
-              {t("values.firstS")}
-            </p>
-            <p class="slide-top my-2 font-semibold opacity-0 lg:text-base">
-              {t("values.secondS")}
-            </p>
-            <div class="ml-8 grid grid-cols-2 gap-1 md:ml-0 lg:text-base">
-              {
-                valores[0].map((valor, i) => (
-                  <>
-                    <li class="slide-right mt-2 list-none text-left opacity-0 delay-300 before:mr-1 before:content-['✔']">
-                      {valor}
-                    </li>
-                    <li class="slide-left mt-2 list-none text-left opacity-0 delay-300 before:mr-1 before:content-['✔']">
-                      {valores[1][i]}
-                    </li>
-                  </>
-                ))
-              }
-            </div>
+              <div
+                class="p-1 text-justify text-sm text-black md:p-0 lg:text-lg"
+              >
+                <p
+                  class="slide-top prose text-sm text-black opacity-0 lg:text-base"
+                >
+                  {t("values.firstS")}
+                </p>
+                <p class="slide-top my-2 font-semibold opacity-0 lg:text-base">
+                  {t("values.secondS")}
+                </p>
+                <div class="grid grid-cols-2 gap-1 lg:text-base">
+                  {
+                    valores[0].map((valor, i) => (
+                      <>
+                        <li class="slide-right list-none text-left text-xs opacity-0 delay-300 before:mr-1 before:content-['✔'] md:text-base">
+                          {valor}
+                        </li>
+                        <li class="slide-left list-none text-left text-xs opacity-0 delay-300 before:mr-1 before:content-['✔'] md:text-base">
+                          {valores[1][i]}
+                        </li>
+                      </>
+                    ))
+                  }
+                </div>
+              </div>
+              <img
+                class="slide-left h-48 w-auto rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-auto lg:w-[483px]"
+                src="/nosotros/valores002.jpg"
+                alt="Omegha Valores"
+              />
+            </article>
           </div>
-          <img
-            class="slide-left h-48 w-auto rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-80 lg:w-full"
-            src={img3.src}
-            alt="Omegha Valores"
-          />
-        </article>
+        </div>
       </div>
     </div>
+    <PreFooter />
   </section>
 </Layout>
 
