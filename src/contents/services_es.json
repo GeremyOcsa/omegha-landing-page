@@ -2,49 +2,49 @@
   {
     "id": 1,
     "name": "Edificaciones en General",
-    "image": "/servicios/servicios001.jpg",
+    "image": "/servicios/servicios001.webp",
     "description": "Edificaciones en General"
   },
   {
     "id": 2,
     "name": "Hospitales y Centros de Salud",
-    "image": "/servicios/servicios002.jpg",
+    "image": "/servicios/servicios002.webp",
     "description": "Hospitales y Centros de Salud"
   },
   {
     "id": 3,
     "name": "Infraestructura Vial",
-    "image": "/servicios/servicios003.JPG",
+    "image": "/servicios/servicios003.webp",
     "description": "Infraestructura Vial"
   },
   {
     "id": 4,
     "name": "Obras de Saneamiento",
-    "image": "/servicios/servicios004.jpg",
+    "image": "/servicios/servicios004.webp",
     "description": "Obras de Saneamiento"
   },
   {
     "id": 5,
     "name": "Redes de Electrificación",
-    "image": "/servicios/servicios005.jpg",
+    "image": "/servicios/servicios005.webp",
     "description": "Redes de Electrificación"
   },
   {
     "id": 6,
     "name": "Puentes Vehiculares, Peatonales, Badenes",
-    "image": "/servicios/servicios006.jpg",
+    "image": "/servicios/servicios006.webp",
     "description": "Puentes Vehiculares, Peatonales, Badenes"
   },
   {
     "id": 7,
     "name": "Habilitaciones Urbanas",
-    "image": "/servicios/servicios007.jpg",
+    "image": "/servicios/servicios007.webp",
     "description": "Habilitaciones Urbanas"
   },
   {
     "id": 8,
     "name": "Centrales Hidroeléctricas",
-    "image": "/servicios/servicios008.bmp",
+    "image": "/servicios/servicios008.webp",
     "description": "Centrales Hidroeléctricas"
   }
 ]

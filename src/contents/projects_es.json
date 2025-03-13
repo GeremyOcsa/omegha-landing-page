@@ -2,9 +2,10 @@
   {
     "id": 1,
     "name": "Obra Demolición",
-    "image": "/proyectos/proyectos001.jpg",
+    "image": "/proyectos/proyectos001.webp",
     "description": "Obra “Demolición del hospital regional, Construcción del nuevo Hospital II-2 en Tarapoto incluido hospital de Contingencia en la Banda de Shilcayo - San Martin - Perú”",
     "gallery": [
+      "/proyectos/proyectos001.webp",
       "/proyectos/proyectos001/001-01.jpg",
       "/proyectos/proyectos001/001-02.jpg",
       "/proyectos/proyectos001/001-03.jpg",
@@ -20,9 +21,10 @@
   {
     "id": 2,
     "name": "El Embrujo",
-    "image": "/proyectos/proyectos002.jpg",
+    "image": "/proyectos/proyectos002.webp",
     "description": "Proyecto “El Embrujo, Diseño de Centro Comercial y Urbanización en 17 hectáreas de terreno”",
     "gallery": [
+      "/proyectos/proyectos002.webp",
       "/proyectos/proyectos002/002-01.jpg",
       "/proyectos/proyectos002/002-02.jpg",
       "/proyectos/proyectos002/002-03.jpg",
@@ -38,9 +40,10 @@
   {
     "id": 3,
     "name": "Obra Mejoramiento",
-    "image": "/proyectos/proyectos003.jpg",
+    "image": "/proyectos/proyectos003.webp",
     "description": "Obra “Mejoramiento y Ampliación del Sistema de Agua Potable y Alcantarillado de la Ciudad de Rioja - San Martin - Perú”",
     "gallery": [
+      "/proyectos/proyectos003.webp",
       "/proyectos/proyectos003/003-01.jpg",
       "/proyectos/proyectos003/003-02.jpg",
       "/proyectos/proyectos003/003-03.jpg",
@@ -56,14 +59,15 @@
   {
     "id": 4,
     "name": "Consultoría",
-    "image": "/proyectos/proyectos004.jpeg",
+    "image": "/proyectos/proyectos004.webp",
     "description": "Consultoría “Proyecto de Ingeniería de Detalle (PID) correspondiente a los Tramos Viales Nº 01 y 04 del Eje Multimodal del Amazonas Norte” - IIRSA Norte - Perú",
     "gallery": [
+      "/proyectos/proyectos004.webp",
       "/proyectos/proyectos004/004-01.jpg",
       "/proyectos/proyectos004/004-02.jpg",
       "/proyectos/proyectos004/004-03.jpg",
       "/proyectos/proyectos004/004-04.jpg",
-      "/proyectos/proyectos004/004-05.jpeg",
+      "/proyectos/proyectos004/004-05.jpg",
       "/proyectos/proyectos004/004-06.jpg",
       "/proyectos/proyectos004/004-07.jpg",
       "/proyectos/proyectos004/004-08.jpg",
@@ -74,9 +78,10 @@
   {
     "id": 5,
     "name": "Condominio Diosostenible Yori",
-    "image": "/proyectos/proyectos005.jpg",
+    "image": "/proyectos/proyectos005.webp",
     "description": "Diseño y Construcción del “Condominio Biosostenible Yori - San Martin - Perú”",
     "gallery": [
+      "/proyectos/proyectos005.webp",
       "/proyectos/proyectos005/005-01.jpg",
       "/proyectos/proyectos005/005-02.jpg",
       "/proyectos/proyectos005/005-03.jpg",
@@ -92,36 +97,39 @@
   {
     "id": 6,
     "name": "Consultoría",
-    "image": "/proyectos/proyectos006.jpg",
+    "image": "/proyectos/proyectos006.webp",
     "description": "Consultoría “Saldo de obra Mejoramiento del Camino Vecinal Buenos Aires - Santa Catalina (acceso al Puente Motilones) - Flor del Mayo, Margen Izquierda del Río Mayo, Moyobamba - San Martín - Perú”",
     "gallery": [
+      "/proyectos/proyectos006.webp",
       "/proyectos/proyectos006/006-01.jpg",
       "/proyectos/proyectos006/006-02.jpg",
       "/proyectos/proyectos006/006-03.jpg",
       "/proyectos/proyectos006/006-04.jpg",
       "/proyectos/proyectos006/006-05.jpg",
-      "/proyectos/proyectos006/006-06.png",
+      "/proyectos/proyectos006/006-06.jpg",
       "/proyectos/proyectos006/006-07.jpg"
     ]
   },
   {
     "id": 7,
     "name": "Discoteca",
-    "image": "/proyectos/proyectos007.jpg",
+    "image": "/proyectos/proyectos007.webp",
     "description": "Diseño y Construcción de Discoteca en la Ciudad de Iquitos - Región Loreto - Perú, de 02 plantas",
     "gallery": [
-      "/proyectos/proyectos007/007-01.png",
+      "/proyectos/proyectos007.webp",
+      "/proyectos/proyectos007/007-01.jpg",
       "/proyectos/proyectos007/007-02.jpg",
       "/proyectos/proyectos007/007-03.jpg",
-      "/proyectos/proyectos007/007-04.JPG"
+      "/proyectos/proyectos007/007-04.jpg"
     ]
   },
   {
     "id": 8,
     "name": "Prueba de Tecnología",
-    "image": "/proyectos/proyectos008.jpeg",
+    "image": "/proyectos/proyectos008.webp",
     "description": "Servicio “Prueba de Tecnología de Caminos con R-SOIL en cabecera del Hangar de Palmas del Espino - Santa Lucia - Tocache - Perú”",
     "gallery": [
+      "/proyectos/proyectos008.webp",
       "/proyectos/proyectos008/008-01.jpg",
       "/proyectos/proyectos008/008-02.jpg",
       "/proyectos/proyectos008/008-03.jpg",
@@ -129,54 +137,57 @@
       "/proyectos/proyectos008/008-05.jpg",
       "/proyectos/proyectos008/008-06.jpg",
       "/proyectos/proyectos008/008-07.jpg",
-      "/proyectos/proyectos008/008-08.jpeg",
+      "/proyectos/proyectos008/008-08.jpg",
       "/proyectos/proyectos008/008-09.jpg",
-      "/proyectos/proyectos008/008-10.jpeg"
+      "/proyectos/proyectos008/008-10.jpg"
     ]
   },
   {
     "id": 9,
     "name": "Obra Mejoramiento",
-    "image": "/proyectos/proyectos009.jpg",
-    "description": "Mejoramiento de los Servicios de Salud del Hospital II-2 Cesar Garayar García, Iquitos - Maynas - Loreto - Perú.",
+    "image": "/proyectos/proyectos009.webp",
+    "description": "“Mejoramiento de los Servicios de Salud del Hospital II-2 Cesar Garayar García, Iquitos - Maynas - Loreto - Perú.“",
     "gallery": [
+      "/proyectos/proyectos009.webp",
       "/proyectos/proyectos009/009-01.jpg",
       "/proyectos/proyectos009/009-02.jpg",
       "/proyectos/proyectos009/009-03.jpg",
       "/proyectos/proyectos009/009-04.jpg",
       "/proyectos/proyectos009/009-05.jpg",
-      "/proyectos/proyectos009/009-06.png",
+      "/proyectos/proyectos009/009-06.jpg",
       "/proyectos/proyectos009/009-07.jpg"
     ]
   },
   {
     "id": 10,
     "name": "Proyecto de Ingeniería",
-    "image": "/proyectos/Proyectos010.png",
+    "image": "/proyectos/proyectos010.webp",
     "description": "“Proyecto de Ingeniería de Detalle del Nuevo Peaje de Santa en la Red Vial 4: Pativilca - Trujillo - Perú”",
     "gallery": [
-      "/proyectos/proyectos010/010-01.png",
-      "/proyectos/proyectos010/010-02.png",
-      "/proyectos/proyectos010/010-03.png",
-      "/proyectos/proyectos010/010-04.png",
-      "/proyectos/proyectos010/010-05.png",
-      "/proyectos/proyectos010/010-06.png",
-      "/proyectos/proyectos010/010-07.png",
-      "/proyectos/proyectos010/010-08.png",
-      "/proyectos/proyectos010/010-09.png"
+      "/proyectos/proyectos010.webp",
+      "/proyectos/proyectos010/010-01.webp",
+      "/proyectos/proyectos010/010-02.webp",
+      "/proyectos/proyectos010/010-03.webp",
+      "/proyectos/proyectos010/010-04.webp",
+      "/proyectos/proyectos010/010-05.webp",
+      "/proyectos/proyectos010/010-06.webp",
+      "/proyectos/proyectos010/010-07.webp",
+      "/proyectos/proyectos010/010-08.webp",
+      "/proyectos/proyectos010/010-09.webp"
     ]
   },
   {
     "id": 11,
     "name": "Conjunto Residencial Suchiche",
-    "image": "/proyectos/proyectos011.jpg",
+    "image": "/proyectos/proyectos011.webp",
     "description": "Proyecto “Conjunto Residencial Suchiche”, de 04 plantas en la Ciudad de Tarapoto - San Martin - Perú",
     "gallery": [
-      "/proyectos/proyectos011/011-01.bmp",
-      "/proyectos/proyectos011/011-02.bmp",
-      "/proyectos/proyectos011/011-03.bmp",
-      "/proyectos/proyectos011/011-04.bmp",
-      "/proyectos/proyectos011/011-05.bmp",
+      "/proyectos/proyectos011.webp",
+      "/proyectos/proyectos011/011-01.jpg",
+      "/proyectos/proyectos011/011-02.jpg",
+      "/proyectos/proyectos011/011-03.jpg",
+      "/proyectos/proyectos011/011-04.jpg",
+      "/proyectos/proyectos011/011-05.jpg",
       "/proyectos/proyectos011/011-06.jpg",
       "/proyectos/proyectos011/011-07.jpg",
       "/proyectos/proyectos011/011-08.jpg",
@@ -187,9 +198,10 @@
   {
     "id": 12,
     "name": "Proyecto integrado del Sistema de Agua Potable",
-    "image": "/proyectos/proyectos012.jpg",
+    "image": "/proyectos/proyectos012.webp",
     "description": "“Proyecto integrado del Sistema de Agua Potable y Alcantarillado de la Localidad de Bagua - Amazonas - Perú”",
     "gallery": [
+      "/proyectos/proyectos012.webp",
       "/proyectos/proyectos012/012-01.jpg",
       "/proyectos/proyectos012/012-02.jpg",
       "/proyectos/proyectos012/012-03.jpg"
@@ -198,37 +210,39 @@
   {
     "id": 13,
     "name": "Proyecto Residencial",
-    "image": "/proyectos/proyectos013.jpg",
+    "image": "/proyectos/proyectos013.webp",
     "description": "“Proyecto Residencial, complejo construido sobre un terreno de 2,800 m2 aprox.”",
     "gallery": [
-      "/proyectos/proyectos013/013-01.bmp",
+      "/proyectos/proyectos013.webp",
+      "/proyectos/proyectos013/013-01.jpg",
       "/proyectos/proyectos013/013-02.jpg",
       "/proyectos/proyectos013/013-03.jpg",
-      "/proyectos/proyectos013/013-04.bmp",
+      "/proyectos/proyectos013/013-04.jpg",
       "/proyectos/proyectos013/013-05.jpg",
       "/proyectos/proyectos013/013-06.jpg",
       "/proyectos/proyectos013/013-07.jpg",
       "/proyectos/proyectos013/013-08.jpg",
-      "/proyectos/proyectos013/013-09.bmp",
+      "/proyectos/proyectos013/013-09.jpg",
       "/proyectos/proyectos013/013-10.jpg"
     ]
   },
   {
     "id": 14,
     "name": "Mausoleo Familiar",
-    "image": "/proyectos/proyectos014.JPG",
+    "image": "/proyectos/proyectos014.webp",
     "description": "“Diseño y Obra de Mausoleo familiar en Tingo de Saposoa - San Martin - Perú”",
     "gallery": [
-      "/proyectos/proyectos014/014-01.JPG",
-      "/proyectos/proyectos014/014-02.JPG",
-      "/proyectos/proyectos014/014-03.JPG",
-      "/proyectos/proyectos014/014-04.JPG",
-      "/proyectos/proyectos014/014-05.JPG",
-      "/proyectos/proyectos014/014-06.JPG",
-      "/proyectos/proyectos014/014-07.JPG",
-      "/proyectos/proyectos014/014-08.JPG",
-      "/proyectos/proyectos014/014-09.JPG",
-      "/proyectos/proyectos014/014-10.JPG"
+      "/proyectos/proyectos014.webp",
+      "/proyectos/proyectos014/014-01.jpg",
+      "/proyectos/proyectos014/014-02.jpg",
+      "/proyectos/proyectos014/014-03.jpg",
+      "/proyectos/proyectos014/014-04.jpg",
+      "/proyectos/proyectos014/014-05.jpg",
+      "/proyectos/proyectos014/014-06.jpg",
+      "/proyectos/proyectos014/014-07.jpg",
+      "/proyectos/proyectos014/014-08.jpg",
+      "/proyectos/proyectos014/014-09.jpg",
+      "/proyectos/proyectos014/014-10.jpg"
     ]
   }
 ]
