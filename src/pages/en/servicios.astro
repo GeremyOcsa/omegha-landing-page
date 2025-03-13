@@ -1,18 +1,18 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import services from "@contents/services_es.json";
 import Card from "@components/Card.astro";
-
+import services from "@contents/services_en.json";
+import PreFooter from "@components/PreFooter.astro";
+//Idioma
 import { useTranslations } from "src/i18n/utils";
 import type { languageList } from "src/i18n/ui";
-import PreFooter from "@components/PreFooter.astro";
 
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <Layout title="Services">
-  <section class="bg-hero bg-cover bg-center bg-no-repeat pb-5 md:bg-fixed">
+  <section class="pb-5">
     <div class="mx-auto min-h-screen max-w-5xl p-4 pb-40">
       <div class="rounded-2xl bg-white-general bg-opacity-60 p-5">
         <div class="prose max-w-none pb-8">
@@ -34,14 +34,16 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         <div
           class="prose mx-auto max-w-4xl pt-8 text-sm text-black lg:text-base"
         >
-          <h1 class="text-center uppercase text-blue-900 md:text-left">
+          <h1
+            class="slide-top text-center uppercase text-blue-900 opacity-0 md:text-left"
+          >
             {t("serv.h2")}
           </h1>
-          <p class="text-justify">
+          <p class="slide-top text-justify opacity-0">
             {t("serv.des")}
           </p>
           <div>
-            <figure>
+            <figure class="slide-top opacity-0">
               <img
                 class="mx-auto h-48 rounded-lg border-2 border-slate-950 shadow-lg md:h-96"
                 src="/servicios/comercial.webp"
@@ -54,7 +56,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               </figcaption>
             </figure>
 
-            <figure>
+            <figure class="slide-top opacity-0">
               <img
                 class="mx-auto h-48 rounded-lg border-2 border-slate-950 shadow-lg md:h-96"
                 src="/servicios/huancayo.webp"
@@ -67,7 +69,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               </figcaption>
             </figure>
 
-            <figure>
+            <figure class="slide-top opacity-0">
               <img
                 class="mx-auto h-48 rounded-lg border-2 border-slate-950 shadow-lg md:h-96"
                 src="/servicios/arquitectura003.webp"
@@ -86,3 +88,32 @@ const t = useTranslations(currentLang as keyof typeof languageList);
     <PreFooter />
   </section>
 </Layout>
+
+<script>
+  function initAnimations() {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(
+              "animate-slide-top",
+              "md:animate-slide-top-desktop"
+            );
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    document
+      .querySelectorAll(".slide-top")
+      .forEach((el) => observer.observe(el));
+  }
+  document.addEventListener("astro:after-swap", initAnimations);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("astro:page-load", initAnimations);
+  } else {
+    initAnimations();
+  }
+</script>
