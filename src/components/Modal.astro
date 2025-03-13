@@ -43,7 +43,7 @@ const { urlImg, name, description } = Astro.props;
 </dialog>
 
 <script>
-  document.addEventListener("astro:page-load", function () {
+  function initModal() {
     document.querySelectorAll("[data-modal]").forEach((dialog, index) => {
       const showButton = document.querySelectorAll("[data-open-modal]")[index];
       const closeButton = dialog.querySelector("[data-close-modal]");
@@ -69,5 +69,12 @@ const { urlImg, name, description } = Astro.props;
       }
       dialog.addEventListener("close", enableScroll);
     });
-  });
+  }
+  document.addEventListener("astro:after-swap", initModal);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("astro:page-load", initModal);
+  } else {
+    initModal();
+  }
 </script>
