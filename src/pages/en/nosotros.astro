@@ -1,25 +1,25 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import PreFooter from "@components/PreFooter.astro";
 import { Icon } from "astro-icon/components";
+//Idiomas
 import type { languageList } from "src/i18n/ui";
 import { useTranslations } from "src/i18n/utils";
 
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
+//Imagenes
 import img1 from "src/assets/nosotros/01.webp";
 import img2 from "src/assets/nosotros/02.webp";
-import img3 from "src/assets/nosotros/03.webp";
-import PreFooter from "@components/PreFooter.astro";
-
+//Valores
 const valores = [
   ["Honesty", "Order", "Simplicity", "Professional Vocation"],
   ["Responsibility", "Discipline", "Precision", "Constant Innovation"],
 ];
-
-const currentLang = Astro.currentLocale || "es";
-const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <Layout title="About Us">
-  <section class="bg-hero bg-cover bg-center bg-no-repeat pb-5 md:bg-fixed">
+  <section class="pb-5">
     <div class="mx-auto min-h-screen max-w-5xl p-4">
       <div
         class="flex flex-col gap-3 rounded-2xl bg-white-general bg-opacity-60 p-5 md:gap-6"
