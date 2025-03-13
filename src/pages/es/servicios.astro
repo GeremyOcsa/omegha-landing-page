@@ -5,14 +5,15 @@ import Card from "@components/Card.astro";
 
 import { useTranslations } from "src/i18n/utils";
 import type { languageList } from "src/i18n/ui";
+import PreFooter from "@components/PreFooter.astro";
 
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <Layout title="Servicios">
-  <section class="bg-hero bg-cover bg-scroll bg-no-repeat pb-40 md:bg-fixed">
-    <div class="mx-auto min-h-screen max-w-5xl p-4">
+  <section class="bg-hero bg-cover bg-center bg-no-repeat pb-5 md:bg-fixed">
+    <div class="mx-auto min-h-screen max-w-5xl p-4 pb-40">
       <div class="rounded-2xl bg-white-general bg-opacity-60 p-5">
         <div class="prose max-w-none pb-8">
           <h1 class="uppercase text-blue-900 md:pl-5">{t("serv.title")}</h1>
@@ -33,21 +34,21 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         <div
           class="prose mx-auto max-w-4xl pt-8 text-sm text-black lg:text-base"
         >
-          <h2 class="text-center uppercase text-blue-900 md:text-left">
+          <h1 class="text-center uppercase text-blue-900 md:text-left">
             {t("serv.h2")}
-          </h2>
+          </h1>
           <p class="text-justify">
             {t("serv.des")}
           </p>
           <div>
             <figure>
               <img
-                class="h-48 w-full rounded-lg border-2 border-slate-950 shadow-lg md:h-96"
-                src="/servicios/comercial.jpg"
+                class="mx-auto h-48 rounded-lg border-2 border-slate-950 shadow-lg md:h-96"
+                src="/servicios/comercial.webp"
                 alt="Centro Comercial"
               />
               <figcaption
-                class="text-center text-sm font-semibold text-black lg:text-base"
+                class="mx-auto text-center text-sm font-semibold text-black md:w-[600px] lg:text-base"
               >
                 {t("serv.para1")}
               </figcaption>
@@ -55,12 +56,12 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 
             <figure>
               <img
-                class="h-48 w-full rounded-lg border-2 border-slate-950 shadow-lg md:h-96"
-                src="/servicios/huancayo.jpg"
+                class="mx-auto h-48 rounded-lg border-2 border-slate-950 shadow-lg md:h-96"
+                src="/servicios/huancayo.webp"
                 alt="Centro Comercial"
               />
               <figcaption
-                class="text-center text-sm font-semibold text-black lg:text-base"
+                class="mx-auto text-center text-sm font-semibold text-black md:w-[600px] lg:text-base"
               >
                 {t("serv.para2")}
               </figcaption>
@@ -68,8 +69,8 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 
             <figure>
               <img
-                class="h-48 w-full rounded-lg border-2 border-slate-950 shadow-lg md:h-96"
-                src="/servicios/arquitectura003.png"
+                class="mx-auto h-48 rounded-lg border-2 border-slate-950 shadow-lg md:h-96"
+                src="/servicios/arquitectura003.webp"
                 alt="Servicios arquitectura"
               />
               <figcaption
@@ -82,5 +83,6 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         </div>
       </div>
     </div>
+    <PreFooter />
   </section>
 </Layout>
