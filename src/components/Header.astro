@@ -9,7 +9,9 @@ const pathname = Astro.url.pathname;
 const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
-<nav class="relative flex flex-col items-center bg-slate-200 bg-bottom p-4">
+<nav
+  class="relative flex flex-col items-center bg-opacity-20 bg-gradient-to-b from-sky-700 to-sky-300 bg-bottom p-4"
+>
   <div class="mx-auto flex w-full items-center justify-between lg:max-w-5xl">
     <!--Logo -->
     <a href={getRelativeLocaleUrl(currentLang, "/")}>
@@ -127,7 +129,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
     class="fixed bottom-0 left-0 top-0 flex w-5/6 max-w-sm flex-col overflow-y-auto border-r bg-white px-6 py-6"
   >
     <div class="mb-8 flex items-center">
-      <a class="mr-auto" href="#">
+      <a class="mr-auto" href={getRelativeLocaleUrl(currentLang, "/")}>
         <img src="/header/logo.png" class="h-16" alt="" />
       </a>
       <button class="navbar-close">
@@ -148,12 +150,6 @@ const t = useTranslations(currentLang as keyof typeof languageList);
     </div>
     <div>
       <ul>
-        <li class="mb-1">
-          <a
-            class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
-            href={getRelativeLocaleUrl(currentLang, "/")}>{t("nav.home")}</a
-          >
-        </li>
         <li class="mb-1">
           <a
             class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
