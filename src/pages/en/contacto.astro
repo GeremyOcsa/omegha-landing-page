@@ -1,5 +1,6 @@
 ---
 import Mapita from "@components/Mapita.astro";
+import PreFooter from "@components/PreFooter.astro";
 import Layout from "@layouts/Layout.astro";
 
 import type { languageList } from "src/i18n/ui";
@@ -10,7 +11,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <Layout title="Contact Us">
-  <section class="bg-hero bg-cover bg-scroll bg-no-repeat md:bg-fixed">
+  <section class="bg-hero bg-cover bg-scroll bg-no-repeat pb-5 md:bg-fixed">
     <div class="mx-auto min-h-screen max-w-5xl p-4">
       <div class="rounded-2xl bg-white-general bg-opacity-60 p-5">
         <article class="prose max-w-none text-sm lg:text-base">
@@ -61,5 +62,6 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         </article>
       </div>
     </div>
+    <PreFooter />
   </section>
 </Layout>
