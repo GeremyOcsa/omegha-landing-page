@@ -1,0 +1,104 @@
+---
+import { Icon } from "astro-icon/components";
+const { urlImg, name, description } = Astro.props;
+---
+
+<!-- Simple pop-up dialog box, containing a form -->
+<div class="gallery group relative opacity-0">
+  <div class="relative w-full">
+    <img
+      src={urlImg}
+      alt={name}
+      class="w-full rounded-2xl border-2 border-gray-950"
+    />
+    <div
+      class="absolute inset-0 rounded-2xl bg-background-proser opacity-0 transition-opacity duration-300 group-hover:opacity-60"
+    >
+    </div>
+  </div>
+  <div class="rounded-full bg-yellow-400">
+    <Icon
+      data-open-modal
+      class="absolute left-4 top-4 rounded-full bg-slate-100/30 p-1 text-3xl text-white opacity-0 transition-all duration-300 hover:cursor-pointer hover:bg-slate-100/60 group-hover:opacity-100"
+      name="search"
+    />
+  </div>
+  <div
+    class="absolute bottom-2 p-1 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+  >
+    <p class="text-center">{description}</p>
+  </div>
+</div>
+
+<dialog
+  data-modal
+  class="fixed rounded-xl p-3 outline-0 backdrop:bg-gray-800/65"
+>
+  <slot />
+  <Icon
+    data-close-modal
+    class="absolute right-7 top-7 z-40 rounded-full bg-slate-100/30 text-3xl transition-all duration-300 hover:cursor-pointer hover:bg-slate-100/80"
+    name="close"
+  />
+</dialog>
+
+<script>
+  document.addEventListener("astro:page-load", function () {
+    function initAnimations() {
+      const elements = document.querySelectorAll(".gallery");
+
+      elements.forEach((el, index) => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                el.classList.add(
+                  index % 2 === 0 ? "animate-slide-right" : "animate-slide-left"
+                );
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        observer.observe(el);
+      });
+    }
+
+    document.addEventListener("astro:after-swap", initAnimations);
+
+    if (document.readyState === "loading") {
+      document.addEventListener("astro:page-load", initAnimations);
+    } else {
+      initAnimations();
+    }
+
+    document.querySelectorAll("[data-modal]").forEach((dialog, index) => {
+      const showButton = document.querySelectorAll("[data-open-modal]")[index];
+      const closeButton = dialog.querySelector("[data-close-modal]");
+
+      const disableScroll = () =>
+        document.body.classList.add("overflow-hidden");
+
+      const enableScroll = () =>
+        document.body.classList.remove("overflow-hidden");
+
+      if (showButton) {
+        showButton.addEventListener("click", () => {
+          (dialog as HTMLDialogElement).showModal();
+          disableScroll();
+        });
+      }
+
+      if (closeButton) {
+        closeButton.addEventListener("click", () => {
+          (dialog as HTMLDialogElement).close();
+          enableScroll();
+        });
+      }
+
+      dialog.addEventListener("close", enableScroll);
+    });
+  });
+</script>
