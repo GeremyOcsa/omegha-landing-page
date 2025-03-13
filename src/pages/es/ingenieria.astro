@@ -1,6 +1,7 @@
 ---
-import PreFooter from "@components/PreFooter.astro";
 import Layout from "@layouts/Layout.astro";
+import PreFooter from "@components/PreFooter.astro";
+//Idioma
 import type { languageList } from "src/i18n/ui";
 import { useTranslations } from "src/i18n/utils";
 
@@ -9,7 +10,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <Layout title="Ingenieria">
-  <section class="bg-hero bg-cover bg-center bg-no-repeat pb-5 md:bg-fixed">
+  <section class="pb-5">
     <div class="mx-auto min-h-screen max-w-5xl p-4 pb-40">
       <div
         class="flex flex-col gap-6 rounded-2xl bg-white-general bg-opacity-60 p-5"
@@ -18,13 +19,17 @@ const t = useTranslations(currentLang as keyof typeof languageList);
           class="prose max-w-none text-justify text-sm text-black lg:text-base"
         >
           <h1 class="uppercase text-blue-900 md:pl-5">{t("engi.title")}</h1>
-          <p>
+          <p class="animate-slide-top md:animate-slide-top-desktop">
             {t("engi.des")}
           </p>
-          <span>{t("engi.span")}</span>
+          <p class="animate-slide-top md:animate-slide-top-desktop">
+            {t("engi.span")}
+          </p>
         </div>
 
-        <article class="rounded-2xl bg-blue-200 bg-opacity-40 p-5">
+        <article
+          class="animate-slide-top rounded-2xl bg-blue-200 bg-opacity-40 p-5 md:animate-slide-top-desktop"
+        >
           <div class="flex flex-col justify-center gap-4 md:flex-row-reverse">
             <div
               class="prose self-center text-justify text-sm text-black lg:text-base"
@@ -44,7 +49,9 @@ const t = useTranslations(currentLang as keyof typeof languageList);
           </div>
         </article>
 
-        <article class="rounded-2xl bg-blue-200 bg-opacity-40 p-5">
+        <article
+          class="slide-top rounded-2xl bg-blue-200 bg-opacity-40 p-5 opacity-0"
+        >
           <div class="flex flex-col justify-center gap-4 md:flex-row-reverse">
             <div
               class="prose self-center text-justify text-sm text-black md:w-1/2 lg:text-base"
@@ -62,7 +69,9 @@ const t = useTranslations(currentLang as keyof typeof languageList);
           </div>
         </article>
 
-        <article class="rounded-2xl bg-blue-200 bg-opacity-40 p-5">
+        <article
+          class="slide-top rounded-2xl bg-blue-200 bg-opacity-40 p-5 opacity-0"
+        >
           <div class="flex flex-col justify-center gap-4 md:flex-row-reverse">
             <div
               class="prose self-center text-justify text-sm text-black md:w-1/2 lg:text-base"
@@ -82,7 +91,9 @@ const t = useTranslations(currentLang as keyof typeof languageList);
           </div>
         </article>
 
-        <article class="rounded-2xl bg-blue-200 bg-opacity-40 p-5">
+        <article
+          class="slide-top rounded-2xl bg-blue-200 bg-opacity-40 p-5 opacity-0"
+        >
           <div class="flex flex-col justify-center gap-4 md:flex-row-reverse">
             <div
               class="prose self-center text-justify text-sm text-black md:w-1/2 lg:text-base"
@@ -106,3 +117,32 @@ const t = useTranslations(currentLang as keyof typeof languageList);
     <PreFooter />
   </section>
 </Layout>
+
+<script>
+  function initAnimations() {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(
+              "animate-slide-top",
+              "md:animate-slide-top-desktop"
+            );
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    document
+      .querySelectorAll(".slide-top")
+      .forEach((el) => observer.observe(el));
+  }
+  document.addEventListener("astro:after-swap", initAnimations);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("astro:page-load", initAnimations);
+  } else {
+    initAnimations();
+  }
+</script>
