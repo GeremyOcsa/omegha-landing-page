@@ -43,37 +43,39 @@ const { urlImg, name, description } = Astro.props;
 </dialog>
 
 <script>
-  document.addEventListener("astro:page-load", function () {
-    function initAnimations() {
-      const elements = document.querySelectorAll(".gallery");
+  document.addEventListener("astro:page-load", () => {
+    initAnimations();
+    initModals();
+  });
 
-      elements.forEach((el, index) => {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                el.classList.add(
-                  index % 2 === 0 ? "animate-slide-right" : "animate-slide-left"
-                );
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.2 }
-        );
+  document.addEventListener("astro:after-swap", () => {
+    initAnimations();
+    initModals();
+  });
 
-        observer.observe(el);
-      });
-    }
+  function initAnimations() {
+    const elements = document.querySelectorAll(".gallery");
 
-    document.addEventListener("astro:after-swap", initAnimations);
+    elements.forEach((el, index) => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              el.classList.add(
+                index % 2 === 0 ? "animate-slide-right" : "animate-slide-left"
+              );
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
 
-    if (document.readyState === "loading") {
-      document.addEventListener("astro:page-load", initAnimations);
-    } else {
-      initAnimations();
-    }
+      observer.observe(el);
+    });
+  }
 
+  function initModals() {
     document.querySelectorAll("[data-modal]").forEach((dialog, index) => {
       const showButton = document.querySelectorAll("[data-open-modal]")[index];
       const closeButton = dialog.querySelector("[data-close-modal]");
@@ -100,5 +102,5 @@ const { urlImg, name, description } = Astro.props;
 
       dialog.addEventListener("close", enableScroll);
     });
-  });
+  }
 </script>
