@@ -1,4 +1,5 @@
 ---
+import PreFooter from "@components/PreFooter.astro";
 import Layout from "@layouts/Layout.astro";
 import type { languageList } from "src/i18n/ui";
 import { useTranslations } from "src/i18n/utils";
@@ -8,8 +9,8 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <Layout title="Ingenieria">
-  <section class="bg-hero bg-cover bg-scroll bg-no-repeat pb-40 md:bg-fixed">
-    <div class="mx-auto min-h-screen max-w-5xl p-4">
+  <section class="bg-hero bg-cover bg-center bg-no-repeat pb-5 md:bg-fixed">
+    <div class="mx-auto min-h-screen max-w-5xl p-4 pb-40">
       <div
         class="flex flex-col gap-6 rounded-2xl bg-white-general bg-opacity-60 p-5"
       >
@@ -36,8 +37,8 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               </p>
             </div>
             <img
-              class="h-auto w-[580px] rounded-2xl border-2 border-gray-950 object-cover md:w-96 lg:h-72 lg:w-full"
-              src="/ingenieria/IMG-20191125-WA0011.jpeg"
+              class="h-auto rounded-2xl border-2 border-gray-950 object-cover md:w-96 lg:h-72 lg:w-full"
+              src="/ingenieria/03.webp"
               alt="Condominio Biosostenible Yori"
             />
           </div>
@@ -54,8 +55,8 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               </p>
             </div>
             <img
-              class="h-72 w-[468px] flex-1 rounded-2xl border-2 border-gray-950 object-cover md:w-96 lg:h-72 lg:w-[469px]"
-              src="/ingenieria/IMG-20191114-WA0014.jpg"
+              class="h-auto rounded-2xl border-2 border-gray-950 object-cover md:w-96 lg:h-72 lg:w-[510px]"
+              src="/ingenieria/02.webp"
               alt="Iglesia de Tarapoto"
             />
           </div>
@@ -74,8 +75,8 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               </p>
             </div>
             <img
-              class="h-72 w-[468px] flex-1 rounded-2xl border-2 border-gray-950 object-cover md:w-96 lg:h-72 lg:w-[469px]"
-              src="/ingenieria/20160420_113555.jpg"
+              class="h-auto flex-1 rounded-2xl border-2 border-gray-950 object-cover md:w-96 lg:h-72 lg:w-[510px]"
+              src="/ingenieria/01.webp"
               alt="Diseño de estructuras"
             />
           </div>
@@ -94,13 +95,14 @@ const t = useTranslations(currentLang as keyof typeof languageList);
               </p>
             </div>
             <img
-              class="w-[482px] rounded-2xl border-2 border-gray-950 object-cover md:h-72 lg:w-[502px]"
-              src="/ingenieria/Obra en Anchas 05.jpeg"
+              class="h-auto rounded-2xl border-2 border-gray-950 object-cover md:h-72 lg:w-[510px]"
+              src="/ingenieria/04.webp"
               alt="Primera carretera"
             />
           </div>
         </article>
       </div>
     </div>
+    <PreFooter />
   </section>
 </Layout>
