@@ -1,7 +1,10 @@
 ---
-import Gallery from "@components/Gallery.astro";
-import PreFooter from "@components/PreFooter.astro";
 import Layout from "@layouts/Layout.astro";
+import Modal from "@components/Modal.astro";
+import projects from "@contents/projects_es.json";
+import Slider from "@components/Slider.jsx";
+import PreFooter from "@components/PreFooter.astro";
+// Idioma
 import type { languageList } from "src/i18n/ui";
 import { useTranslations } from "src/i18n/utils";
 
@@ -10,23 +13,63 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <Layout title="Proyectos">
-  <section class="bg-hero bg-cover bg-center bg-no-repeat pb-5 md:bg-fixed">
+  <section class="pb-5">
     <div class="mx-auto min-h-screen max-w-5xl p-4 pb-40">
       <div class="rounded-2xl bg-white-general bg-opacity-60 p-5">
         <div
           class="prose max-w-none pb-8 text-justify text-sm text-black lg:text-base"
         >
           <h1 class="uppercase text-blue-900 md:pl-5">{t("pro.title")}</h1>
-          <p>
+          <p class="slide-top opacity-0">
             {t("pro.des")}
           </p>
-          <span>{t("pro.span")}</span>
+          <p class="slide-top opacity-0">{t("pro.span")}</p>
         </div>
         <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
-          <Gallery />
+          <!-- <Gallery /> -->
+          {
+            projects.map((data) => (
+              <Modal
+                urlImg={data.image}
+                name={data.name}
+                description={data.description}
+              >
+                <Slider gallery={data.gallery} client:load />
+              </Modal>
+            ))
+          }
         </div>
       </div>
     </div>
     <PreFooter />
   </section>
 </Layout>
+
+<script>
+  function initAnimations() {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(
+              "animate-slide-top",
+              "md:animate-slide-top-desktop"
+            );
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    document
+      .querySelectorAll(".slide-top")
+      .forEach((el) => observer.observe(el));
+  }
+  document.addEventListener("astro:after-swap", initAnimations);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("astro:page-load", initAnimations);
+  } else {
+    initAnimations();
+  }
+</script>
