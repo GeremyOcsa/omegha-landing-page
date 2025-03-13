@@ -24,6 +24,7 @@ export default {
         fondo: "url(/header/fondo_btnr.png)",
         li_green: "url(/header/btnr_over.png)",
         fondo_footer: "url(/footer/linea_verde.jpg)",
+        mobile: "url(/background_mobile.jpg)",
       },
       keyframes: {
         "slide-right": {
@@ -67,7 +68,7 @@ export default {
           },
         },
         "slide-top-desktop": {
-          "0%": { opacity: "0", transform: "translateY(150px)" },
+          "0%": { opacity: "0", transform: "translateY(85px)" },
           "100%": {
             opacity: "1",
             transform: "translateY(0px)",
