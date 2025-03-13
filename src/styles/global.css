@@ -1,0 +1,9 @@
+:root {
+  /* Pagination */
+  --swiper-navigation-size: 30px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: #ffffff;
+  /* Navigation */
+  --swiper-pagination-fraction-color: #ffffff;
+}
