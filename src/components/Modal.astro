@@ -4,7 +4,7 @@ const { urlImg, name, description } = Astro.props;
 ---
 
 <!-- Simple pop-up dialog box, containing a form -->
-<div class="gallery group relative opacity-0">
+<div class="group relative">
   <div class="relative w-full">
     <img
       src={urlImg}
@@ -43,39 +43,7 @@ const { urlImg, name, description } = Astro.props;
 </dialog>
 
 <script>
-  document.addEventListener("astro:page-load", () => {
-    initAnimations();
-    initModals();
-  });
-
-  document.addEventListener("astro:after-swap", () => {
-    initAnimations();
-    initModals();
-  });
-
-  function initAnimations() {
-    const elements = document.querySelectorAll(".gallery");
-
-    elements.forEach((el, index) => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              el.classList.add(
-                index % 2 === 0 ? "animate-slide-right" : "animate-slide-left"
-              );
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.2 }
-      );
-
-      observer.observe(el);
-    });
-  }
-
-  function initModals() {
+  document.addEventListener("astro:page-load", function () {
     document.querySelectorAll("[data-modal]").forEach((dialog, index) => {
       const showButton = document.querySelectorAll("[data-open-modal]")[index];
       const closeButton = dialog.querySelector("[data-close-modal]");
@@ -99,8 +67,7 @@ const { urlImg, name, description } = Astro.props;
           enableScroll();
         });
       }
-
       dialog.addEventListener("close", enableScroll);
     });
-  }
+  });
 </script>
