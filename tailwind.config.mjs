@@ -23,6 +23,7 @@ export default {
         btnr: "url(/header/btnr.png)",
         fondo: "url(/header/fondo_btnr.png)",
         li_green: "url(/header/btnr_over.png)",
+        fondo_footer: "url(/footer/linea_verde.jpg)",
       },
       keyframes: {
         "slide-right": {
