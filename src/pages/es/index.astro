@@ -1,16 +1,17 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import type { languageList } from "src/i18n/ui";
-import { useTranslations } from "src/i18n/utils";
 import Carousel from "@components/Carousel";
 import PreFooter from "@components/PreFooter.astro";
+//Idioma
+import type { languageList } from "src/i18n/ui";
+import { useTranslations } from "src/i18n/utils";
 
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <Layout title="Inicio">
-  <section class="bg-hero bg-cover bg-scroll bg-no-repeat pb-5 md:bg-fixed">
+  <section class="pb-5">
     <div class="mx-auto min-h-screen p-4 lg:max-w-5xl">
       <article
         class="prose max-w-none rounded-2xl bg-white-general bg-opacity-60 p-5 text-sm text-black lg:text-base"
