@@ -1,6 +1,4 @@
 ---
-import Gallery from "./Gallery.astro";
-
 interface CardProps {
   title: string;
   description: string;
@@ -12,7 +10,7 @@ const { title, description, image, position } = Astro.props;
 ---
 
 <div
-  class="group relative overflow-hidden rounded-2xl border-2 border-gray-950 shadow-lg"
+  class="card group relative overflow-hidden rounded-2xl border-2 border-gray-950 opacity-0 shadow-lg"
 >
   <div
     class="h-full w-full rounded-2xl transition-transform duration-300 group-hover:scale-110"
@@ -27,3 +25,35 @@ const { title, description, image, position } = Astro.props;
     </p>
   </div>
 </div>
+
+<script>
+  function initAnimations() {
+    const elements = document.querySelectorAll(".card");
+
+    elements.forEach((el, index) => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              el.classList.add(
+                index % 2 === 0 ? "animate-slide-right" : "animate-slide-left"
+              );
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      observer.observe(el);
+    });
+  }
+
+  document.addEventListener("astro:after-swap", initAnimations);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("astro:page-load", initAnimations);
+  } else {
+    initAnimations();
+  }
+</script>
