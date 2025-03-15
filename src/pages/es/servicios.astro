@@ -108,6 +108,12 @@ const t = useTranslations(currentLang as keyof typeof languageList);
       .querySelectorAll(".slide-top")
       .forEach((el) => observer.observe(el));
   }
+
   document.addEventListener("astro:after-swap", initAnimations);
-  document.addEventListener("DOMContentLoaded", initAnimations);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("astro:page-load", initAnimations);
+  } else {
+    initAnimations();
+  }
 </script>
