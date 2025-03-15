@@ -90,30 +90,25 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 </Layout>
 
 <script>
-  function initAnimations() {
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(
-              "animate-slide-top",
-              "md:animate-slide-top-desktop"
-            );
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-    document
-      .querySelectorAll(".slide-top")
-      .forEach((el) => observer.observe(el));
-  }
-
-  document.addEventListener("astro:after-swap", initAnimations);
-
-  if (document.readyState === "loading") {
-    document.addEventListener("astro:page-load", initAnimations);
-  } else {
+  document.addEventListener("astro:page-load", () => {
+    function initAnimations() {
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add(
+                "animate-slide-top",
+                "md:animate-slide-top-desktop"
+              );
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+      document
+        .querySelectorAll(".slide-top")
+        .forEach((el) => observer.observe(el));
+    }
     initAnimations();
-  }
+  });
 </script>
