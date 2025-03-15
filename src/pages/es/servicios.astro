@@ -108,6 +108,6 @@ const t = useTranslations(currentLang as keyof typeof languageList);
       .querySelectorAll(".slide-top")
       .forEach((el) => observer.observe(el));
   }
-  document.addEventListener("DOMContentLoaded", initAnimations);
   document.addEventListener("astro:after-swap", initAnimations);
+  document.addEventListener("DOMContentLoaded", initAnimations);
 </script>
