@@ -89,7 +89,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
   </section>
 </Layout>
 
-<script>
+<script is:inline>
   document.addEventListener("astro:page-load", () => {
     function initAnimations() {
       const observer = new IntersectionObserver(
@@ -110,5 +110,6 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         .forEach((el) => observer.observe(el));
     }
     initAnimations();
+    document.addEventListener("astro:after-preparation", initAnimations);
   });
 </script>
