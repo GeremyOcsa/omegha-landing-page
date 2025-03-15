@@ -9,8 +9,12 @@ import { useTranslations } from "src/i18n/utils";
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 //Imagenes
-import img1 from "src/assets/nosotros/01.webp";
-import img2 from "src/assets/nosotros/02.webp";
+import img1 from "src/assets/nosotros/nosotros01.webp";
+import img2 from "src/assets/nosotros/nosotros02.webp";
+import img3 from "src/assets/nosotros/nosotros03.webp";
+import img4 from "src/assets/nosotros/nosotros04.webp";
+import img5 from "src/assets/nosotros/nosotros05.webp";
+
 //Valores
 const valores = [
   ["Honestidad", "Orden", "Sencillez", "Vocación Profesional"],
@@ -24,7 +28,9 @@ const valores = [
       <div
         class="flex flex-col gap-3 rounded-2xl bg-white-general bg-opacity-60 p-5 md:gap-6"
       >
-        <article class="prose max-w-none text-sm lg:text-base">
+        <article
+          class="prose max-w-none text-sm prose-h1:text-2xl/6 lg:text-base"
+        >
           <h1 class="uppercase text-blue-900 md:pl-5">
             {t("about.title")}
           </h1>
@@ -39,8 +45,8 @@ const valores = [
               </p>
             </div>
             <img
-              class="h-72 w-auto animate-slide-left rounded-2xl border-2 border-gray-950 md:animate-slide-left-desktop md:self-center"
-              src={"/nosotros/nosotros001.jpg"}
+              class="w-full animate-slide-left rounded-2xl border-2 border-gray-950 md:h-80 md:animate-slide-left-desktop md:self-center"
+              src={img1.src}
               alt="Omegha Nosotros"
             />
           </div>
@@ -58,7 +64,7 @@ const valores = [
             </div>
             <img
               class="slide-right h-48 w-full rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-72 lg:w-full"
-              src={img1.src}
+              src={img2.src}
               alt="Omegha Mision"
             />
           </div>
@@ -76,7 +82,7 @@ const valores = [
             </div>
             <img
               class="slide-left invisible h-48 w-full rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-[290px] lg:w-full"
-              src={img2.src}
+              src={img3.src}
               alt="Omegha Vision"
             />
           </div>
@@ -84,11 +90,11 @@ const valores = [
       </div>
 
       <div
-        class="mt-8 rounded-2xl bg-background-values bg-opacity-90 px-5 py-16 md:py-6"
+        class="mt-8 rounded-2xl bg-background-values bg-opacity-90 px-5 py-6"
       >
         <div class="mx-auto max-w-5xl">
           <article
-            class="prose flex max-w-none flex-col items-center space-y-16 pb-8 text-center text-sm text-slate-100 marker:text-black lg:text-lg"
+            class="prose flex max-w-none flex-col items-center space-y-8 pb-8 text-center text-sm text-slate-100 marker:text-black lg:text-lg"
           >
             <div>
               <h2
@@ -145,7 +151,7 @@ const valores = [
             </div>
             <img
               class="slide-right not-prose h-48 w-auto rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-72 lg:w-full"
-              src="/nosotros/valores001.jpg"
+              src={img4.src}
               alt="Omegha Valores"
             />
           </div>
@@ -154,7 +160,7 @@ const valores = [
         <div class="rounded-xl bg-purple-nosotros bg-opacity-40">
           <div class="mx-auto max-w-5xl">
             <article
-              class="flex flex-col-reverse justify-center gap-4 p-5 md:flex-row"
+              class="flex flex-col-reverse justify-center gap-3 p-3 md:flex-row"
             >
               <div
                 class="p-1 text-justify text-sm text-black md:p-0 lg:text-lg"
@@ -171,10 +177,10 @@ const valores = [
                   {
                     valores[0].map((valor, i) => (
                       <>
-                        <li class="slide-right list-none text-left text-xs opacity-0 delay-300 before:mr-1 before:content-['✔'] md:text-base">
+                        <li class="slide-right text-custom list-none text-left opacity-0 delay-300 before:mr-1 before:content-['✔'] md:text-base">
                           {valor}
                         </li>
-                        <li class="slide-left list-none text-left text-xs opacity-0 delay-300 before:mr-1 before:content-['✔'] md:text-base">
+                        <li class="slide-left text-custom list-none text-left opacity-0 delay-300 before:mr-1 before:content-['✔'] md:text-base">
                           {valores[1][i]}
                         </li>
                       </>
@@ -183,8 +189,8 @@ const valores = [
                 </div>
               </div>
               <img
-                class="slide-left h-48 w-auto rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-auto lg:w-[483px]"
-                src="/nosotros/valores002.jpg"
+                class="slide-left h-48 w-auto rounded-2xl border-2 border-gray-950 opacity-0 md:h-auto md:w-96 lg:h-auto lg:w-[459px]"
+                src={img5.src}
                 alt="Omegha Valores"
               />
             </article>

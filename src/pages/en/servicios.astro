@@ -15,7 +15,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
   <section class="pb-5">
     <div class="mx-auto min-h-screen max-w-5xl p-4 pb-40">
       <div class="rounded-2xl bg-white-general bg-opacity-60 p-5">
-        <div class="prose max-w-none pb-8">
+        <div class="prose max-w-none pb-8 prose-h1:text-2xl/6">
           <h1 class="uppercase text-blue-900 md:pl-5">{t("serv.title")}</h1>
         </div>
         <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
@@ -34,11 +34,11 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         <div
           class="prose mx-auto max-w-4xl pt-8 text-sm text-black lg:text-base"
         >
-          <h1
+          <h2
             class="slide-top text-center uppercase text-blue-900 opacity-0 md:text-left"
           >
             {t("serv.h2")}
-          </h1>
+          </h2>
           <p class="slide-top text-justify opacity-0">
             {t("serv.des")}
           </p>
