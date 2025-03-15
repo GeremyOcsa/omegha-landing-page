@@ -26,42 +26,26 @@ const { title, description, image, position } = Astro.props;
   </div>
 </div>
 
-<script>
-  document.addEventListener("astro:page-load", () => {
-    function initAnimations() {
-      const elements = document.querySelectorAll(".card");
-      elements.forEach((el, index) => {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                el.classList.add(
-                  index % 2 === 0 ? "animate-slide-right" : "animate-slide-left"
-                );
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.2 }
-        );
-        observer.observe(el);
-        if (el.getBoundingClientRect().top < window.innerHeight * 0.8) {
-          el.classList.add(
-            index % 2 === 0 ? "animate-slide-right" : "animate-slide-left"
-          );
-          observer.unobserve(el);
-        }
-      });
-    }
-    initAnimations();
-    document.addEventListener("astro:after-preparation", initAnimations);
-  });
+<script is:inline>
+  function initAnimations() {
+    const elements = document.querySelectorAll(".card");
+    elements.forEach((el, index) => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              el.classList.add(
+                index % 2 === 0 ? "animate-slide-right" : "animate-slide-left"
+              );
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+      observer.observe(el);
+    });
+  }
+  document.addEventListener("astro:page-load", initAnimations);
+  document.addEventListener("astro:after-swap", initAnimations);
 </script>
-
-// document.addEventListener("astro:after-swap", initAnimations); // if
-(document.readyState === "loading") {
-  //   document.addEventListener("astro:page-load", initAnimations);
-  // } else {
-  //   initAnimations();
-  // }
-}
