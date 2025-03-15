@@ -37,15 +37,15 @@ const valores = [
           <div class="flex flex-col justify-center gap-4 md:flex-row">
             <div class="text-justify text-black md:mt-4">
               <p
-                class="animate-slide-right md:animate-slide-right-desktop"
+                class="animate-slide-right lg:animate-slide-right-desktop"
                 set:html={t("about.firstP")}
               />
-              <p class="animate-slide-right md:animate-slide-right-desktop">
+              <p class="animate-slide-right lg:animate-slide-right-desktop">
                 {t("about.secondP")}
               </p>
             </div>
             <img
-              class="w-full animate-slide-left rounded-2xl border-2 border-gray-950 md:h-72 md:animate-slide-left-desktop md:self-center"
+              class="w-full animate-slide-left rounded-2xl border-2 border-gray-950 md:h-64 md:self-center lg:h-72 lg:animate-slide-left-desktop"
               src={img1.src}
               alt="Omegha Nosotros"
             />
@@ -210,10 +210,10 @@ const valores = [
           if (entry.isIntersecting) {
             if (entry.target.classList.contains("slide-left")) {
               entry.target.classList.add("animate-slide-left");
-              entry.target.classList.add("md:animate-slide-left-desktop");
+              entry.target.classList.add("lg:animate-slide-left-desktop");
             } else if (entry.target.classList.contains("slide-right")) {
               entry.target.classList.add("animate-slide-right");
-              entry.target.classList.add("md:animate-slide-right-desktop");
+              entry.target.classList.add("lg:animate-slide-right-desktop");
             } else if (entry.target.classList.contains("slide-top")) {
               entry.target.classList.add("animate-slide-top");
             }
