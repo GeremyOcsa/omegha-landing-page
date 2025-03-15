@@ -89,9 +89,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
   </section>
 </Layout>
 
-<script is:inline>
-  document.addEventListener("astro:page-load", initAnimations);
-  document.addEventListener("astro:after-swap", initAnimations);
+<script>
   function initAnimations() {
     const observer = new IntersectionObserver(
       (entries, obs) => {
@@ -104,11 +102,17 @@ const t = useTranslations(currentLang as keyof typeof languageList);
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.2 }
     );
     document
       .querySelectorAll(".slide-top")
       .forEach((el) => observer.observe(el));
   }
-  initAnimations();
+  document.addEventListener("astro:after-swap", initAnimations);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("astro:page-load", initAnimations);
+  } else {
+    initAnimations();
+  }
 </script>

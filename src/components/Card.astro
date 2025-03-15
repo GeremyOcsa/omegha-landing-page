@@ -26,30 +26,31 @@ const { title, description, image, position } = Astro.props;
   </div>
 </div>
 
-<script is:inline>
-  document.addEventListener("astro:page-load", initAnimations);
-  document.addEventListener("astro:after-swap", initAnimations);
-
+<script>
   function initAnimations() {
-    requestAnimationFrame(() => {
-      const elements = document.querySelectorAll(".card");
-      elements.forEach((el, index) => {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                el.classList.add(
-                  index % 2 === 0 ? "animate-slide-right" : "animate-slide-left"
-                );
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.2 }
-        );
-        observer.observe(el);
-      });
+    const elements = document.querySelectorAll(".card");
+    elements.forEach((el, index) => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              el.classList.add(
+                index % 2 === 0 ? "animate-slide-right" : "animate-slide-left"
+              );
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+      observer.observe(el);
     });
   }
-  initAnimations();
+  document.addEventListener("astro:after-swap", initAnimations);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("astro:page-load", initAnimations);
+  } else {
+    initAnimations();
+  }
 </script>
