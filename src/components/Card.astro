@@ -27,6 +27,9 @@ const { title, description, image, position } = Astro.props;
 </div>
 
 <script is:inline>
+  document.addEventListener("astro:page-load", initAnimations);
+  document.addEventListener("astro:after-swap", initAnimations);
+
   function initAnimations() {
     const elements = document.querySelectorAll(".card");
     elements.forEach((el, index) => {
@@ -46,6 +49,4 @@ const { title, description, image, position } = Astro.props;
       observer.observe(el);
     });
   }
-  document.addEventListener("astro:page-load", initAnimations);
-  document.addEventListener("astro:after-swap", initAnimations);
 </script>
