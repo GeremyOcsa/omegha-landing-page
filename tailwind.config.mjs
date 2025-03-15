@@ -87,6 +87,9 @@ export default {
         "slide-left-desktop": "slide-left-desktop 1s ease-out forwards",
         "slide-top-desktop": "slide-top-desktop 1s ease-out forwards",
       },
+      fontSize: {
+        custom: ["0.84rem", { lineHeight: "1.5rem" }],
+      },
     },
   },
   plugins: [typography, "prettier-plugin-tailwindcss", "prettier-plugin-astro"],
