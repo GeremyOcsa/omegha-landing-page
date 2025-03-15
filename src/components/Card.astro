@@ -31,22 +31,25 @@ const { title, description, image, position } = Astro.props;
   document.addEventListener("astro:after-swap", initAnimations);
 
   function initAnimations() {
-    const elements = document.querySelectorAll(".card");
-    elements.forEach((el, index) => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              el.classList.add(
-                index % 2 === 0 ? "animate-slide-right" : "animate-slide-left"
-              );
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.5 }
-      );
-      observer.observe(el);
+    requestAnimationFrame(() => {
+      const elements = document.querySelectorAll(".card");
+      elements.forEach((el, index) => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                el.classList.add(
+                  index % 2 === 0 ? "animate-slide-right" : "animate-slide-left"
+                );
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+        observer.observe(el);
+      });
     });
   }
+  initAnimations();
 </script>
