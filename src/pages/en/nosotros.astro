@@ -33,13 +33,17 @@ const valores = [
           <h1 class="uppercase text-blue-900 md:pl-5">
             {t("about.title")}
           </h1>
-          <div class="flex flex-col justify-center gap-4 md:flex-row">
+          <div
+            class="flex flex-col items-center justify-center md:flex-row md:gap-4"
+          >
             <div class="text-justify text-black md:mt-4">
               <p
                 class="animate-slide-right lg:animate-slide-right-desktop"
                 set:html={t("about.firstP")}
               />
-              <p class="animate-slide-right lg:animate-slide-right-desktop">
+              <p
+                class="mb-1 animate-slide-right lg:animate-slide-right-desktop"
+              >
                 {t("about.secondP")}
               </p>
             </div>
@@ -49,14 +53,21 @@ const valores = [
               alt="Omegha Nosotros"
             />
           </div>
+          <p
+            class="mt-0.5 animate-slide-right text-justify text-black lg:animate-slide-right-desktop"
+          >
+            {t("about.thirdP")}
+          </p>
         </article>
 
-        <article class="rounded-2xl bg-green-nosotros bg-opacity-40 p-3">
-          <div class="flex flex-col justify-center gap-4 md:flex-row-reverse">
+        <article class="mt-4 rounded-2xl bg-green-nosotros bg-opacity-40 p-3">
+          <div
+            class="flex flex-col items-center justify-center gap-4 md:flex-row-reverse"
+          >
             <div
               class="slide-left md:anim prose text-justify text-sm text-black opacity-0 lg:text-base"
             >
-              <h2 class="pl-5 uppercase text-blue-900">{t("mission.title")}</h2>
+              <h2 class="uppercase text-blue-900">{t("mission.title")}</h2>
               <p>
                 {t("mission.des")}
               </p>
@@ -74,7 +85,7 @@ const valores = [
             <div
               class="slide-right prose invisible text-justify text-sm text-black opacity-0 lg:text-base"
             >
-              <h2 class="pl-5 uppercase text-blue-900">{t("vision.title")}</h2>
+              <h2 class="uppercase text-blue-900">{t("vision.title")}</h2>
               <p>
                 {t("vision.des")}
               </p>
@@ -106,21 +117,29 @@ const valores = [
                 set:html={t("values.des")}
               />
             </div>
-            <div class="flex flex-col md:flex-row md:space-x-12">
+            <div class="flex flex-col gap-8 md:flex-row md:gap-0 md:space-x-48">
               <div
-                class="slide-right invisible flex w-60 flex-col items-center text-center opacity-0"
+                class="slide-right invisible flex w-[320px] flex-col items-center text-center opacity-0"
               >
-                <Icon name="heart" class="text-4xl text-color-values" />
+                <Icon name="heart" class="text-3xl text-color-values" />
                 <p class="font-semibold">{t("values.liF")}</p>
               </div>
               <div
-                class="slide-left invisible flex w-60 flex-col items-center text-center opacity-0"
+                class="slide-left invisible flex w-[320px] flex-col items-center text-center opacity-0"
               >
-                <Icon name="heart" class="text-4xl text-color-values" />
+                <Icon name="heart" class="text-3xl text-color-values" />
                 <p class="font-semibold">{t("values.liP")}</p>
               </div>
             </div>
-            <p class="slide-top px-2 text-center opacity-0 md:w-[720px]">
+            <div
+              class="slide-left invisible flex w-[320px] flex-col items-center justify-center text-center opacity-0 md:w-[660px]"
+            >
+              <Icon name="heart" class="text-3xl text-color-values" />
+              <p class="font-semibold">{t("values.liT")}</p>
+            </div>
+            <p
+              class="slide-top px-2 text-justify opacity-0 md:w-[720px] md:text-center"
+            >
               {t("values.para")}
             </p>
           </article>

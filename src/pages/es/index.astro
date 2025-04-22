@@ -21,17 +21,27 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         >
           {t("index.title")}
         </h1>
-        <div class="flex flex-col md:flex-row md:gap-3">
-          <div class="mt-4 text-justify text-black md:w-1/2">
-            <p
-              class="animate-slide-right lg:animate-slide-right-desktop"
-              set:html={t("index.firstP")}
-            />
-            <p class="animate-slide-right lg:animate-slide-right-desktop">
-              {t("index.secondP")}
-            </p>
+        <div class="">
+          <div
+            class="flex flex-col-reverse items-center justify-center gap-4 text-black md:flex-row-reverse"
+          >
+            <div class="w-full">
+              <Carousel client:load />
+            </div>
+            <div class="flex flex-col text-justify">
+              <p
+                class="animate-slide-right lg:animate-slide-right-desktop"
+                set:html={t("index.firstP")}
+              />
+              <p
+                class="mt-0.5 animate-slide-right lg:animate-slide-right-desktop"
+              >
+                {t("index.secondP")}
+              </p>
+            </div>
           </div>
-          <Carousel client:load />
+          <p class="mt-0.5 text-justify">{t("index.thirdP")}</p>
+          <p class="text-justify" set:html={t("index.fourthP")} />
         </div>
       </article>
     </div>

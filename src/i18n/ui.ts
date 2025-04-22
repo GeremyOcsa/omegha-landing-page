@@ -15,35 +15,44 @@ export const labels = {
     // Inicio
     "index.title": "Sean Bienvenidos",
     "index.firstP":
-      "En <strong>OMEGHA CONSTRUCTOR'S BUILDING Co. S.A.C.</strong> nos distinguimos por la calidad de la mano de obra e insumos utilizados en cada una de nuestras obras, lo que nos permite garantizar una entrega puntual y elevados estándares de calidad, a un precio justo.",
+      "En <strong>OMEGHA CONSTRUCTOR'S BUILDING Co. S.A.C.</strong> nos enorgullece ser sinónimo de excelencia, compromiso y confianza en el sector de la construcción. Cada proyecto que desarrollamos refleja nuestra sólida experiencia, el rigor técnico de nuestro equipo y la calidad superior de los materiales que empleamos.",
     "index.secondP":
-      "Destacamos también por la búsqueda constante de nuevas e innovadoras soluciones de ingeniería y diseño arquitectónico, ecológicas y amigables con el medio ambiente, rompiendo todos los estándares establecidos.",
+      "Nuestro compromiso es ofrecer soluciones constructivas integrales, seguras y eficientes, garantizando entregas puntuales y resultados que superan las expectativas de nuestros clientes. Trabajamos con altos estándares de calidad, cuidando cada detalle y ofreciendo un equilibrio ideal entre funcionalidad, estética y sostenibilidad",
+    "index.thirdP":
+      "Nos impulsa la innovación constante. Buscamos integrar las últimas tecnologías en ingeniería y diseño arquitectónico, con un enfoque responsable hacia el medio ambiente. Rompemos paradigmas, proponiendo soluciones vanguardistas que contribuyen al desarrollo sostenible y al bienestar de las comunidades.",
+    "index.fourthP":
+      "<strong>OMEGHA CONSTRUCTOR'S BUILDING Co. S.A.C.</strong> no solo construye edificaciones, sino también relaciones duraderas basadas en la confianza, la transparencia y la excelencia.",
     // Nosotros
     "about.title": "Nuestra Empresa",
     "about.firstP":
-      "<strong>Omegha Constructor Building Co. S.A.C.</strong> es una empresa orientada a la industria de la construcción, desarrollando consultorías y proyectos de todo el ámbito de la ingeniería y la arquitectura, así como la construcción de obras civiles, obras de saneamiento, obras electromecánicas, puentes y carreteras, y servicios de construcción de edificación e inmobiliarios.",
+      "<strong>Omegha Constructor's Building Co. S.A.C.</strong> es una empresa orientada al sector de la construcción, especializada en consultorías y en la ejecución de proyectos integrales en todas las áreas de la ingeniería y la arquitectura. Nuestro campo de acción abarca obras civiles, sistemas de saneamiento, instalaciones electromecánicas, construcción de puentes y carreteras, así como edificaciones residenciales, comerciales e inmobiliarias.",
     "about.secondP":
-      "También nos dedicamos al mantenimiento de infraestructura, administración de mantenimiento de edificios, saneamiento legal de Inmuebles; y brindamos soluciones informáticas para el e-Marketing y el negocio electrónico.",
+      "Contamos con una sólida trayectoria que respalda nuestros servicios en mantenimiento de infraestructura, gestión de mantenimiento de edificios, saneamiento legal de inmuebles, y soluciones digitales aplicadas al e-marketing y los negocios electrónicos, integrando tecnología e innovación en cada proyecto.",
+    "about.thirdP":
+      "Nos comprometemos con la excelencia, garantizando resultados de alta calidad, cumplimiento puntual de los plazos y estricto respeto por las normas de seguridad y cuidado del medio ambiente. Trabajamos con profesionalismo, responsabilidad y una visión moderna que nos permite afrontar los desafíos actuales y contribuir al desarrollo sostenible.",
     "mission.title": "Misión",
     "mission.des":
-      "Basándonos en las necesidades de infraestructura y de espacios y/o instalaciones productivas, ofrecer soluciones ingenieriles y/o inmobiliarias de alta calidad mediante la continua innovación en el diseño, una búsqueda permanente de nuevas y mejores tecnologías, el perfeccionamiento de los procesos constructivos y el servicio personalizado a nuestros clientes.",
+      "Especializarnos en la ejecución de proyectos de infraestructura de alta calidad, como hospitales, centros comerciales y escuelas superiores, puentes y carreteras, saneamiento y alcantarillado, generación y transmisión de energía, brindando soluciones ingenieriles, tecnológicas e inmobiliarias con un enfoque de innovación constante. Nuestro compromiso es ofrecer garantías, seguridad y confianza a nuestros clientes, incluyendo al Estado, a través de procesos constructivos eficientes y respetuosos con el entorno, siempre priorizando la sostenibilidad y el bienestar social.",
     "vision.title": "Visión",
     "vision.des":
-      "Consolidarnos como la mayor solución de calidad ingenieril de construcción en el oriente peruano, contribuyendo al desarrollo de la región generando valor con nuestras obras y proyectos.",
+      "Convertirnos en la opción preferida en el sector de la construcción en la selva y del Perú, destacándonos por nuestro profesionalismo, el respeto por las comunidades locales y el medio ambiente, y por contribuir al desarrollo regional con proyectos que generen valor y bienestar para la población.",
     "values.title": "Nuestros Valores",
     "values.des":
       "En Omegha Constructor Building Co. S.A.C. partimos de dos principios fundamentales:",
-    "values.liF": "El Respeto por el medio en que se interviene",
-    "values.liP": "El Respeto por las etnias que habitan el lugar.",
+    "values.liF": "El respeto por el medio en que se interviene",
+    "values.liP":
+      "El respeto por las comunidades y culturas que habitan el lugar",
+    "values.liT":
+      "La confianza y seguridad que ofrecemos con nuestro profesionalismo y altos estándares de calidad",
     "values.para":
-      "Nuestra empresa desarrolla proyectos amigables con la naturaleza, respetando sus riquezas, biodiversidad, paisajes, microclimas y las actividades productivas de los pobladores lugareños.",
+      "Desarrollamos proyectos amigables con la naturaleza, los microclimas y las actividades productivas de las comunidades, con el objetivo de aportar al desarrollo sostenible y al bienestar de la región.",
     "values.firstI":
       "Asimismo, respetamos en nuestros proyectos, las costumbres, el folklore y las manifestaciones culturales de la población lugareña.",
     "values.secondI":
       "Es de esta forma que nuestras soluciones ingenieriles y constructivas armonizan con el medio sin dañarlo o modificarlo sensiblemente, e impulsan el crecimiento sostenible, ordenado y permanente de las actividades productivas y económicas de la población. Mejorando su calidad de vida, potenciando su productividad, y generando valor.",
     "values.firstS":
-      "Nos debemos a nuestro producto, y ello nos compromete a buscar permanentemente la excelencia en todos nuestros quehaceres y servicios.",
-    "values.secondS": "Al interior de nuestra organización:",
+      "Nos debemos a nuestros resultados, y ellos nos comprometen a buscar permanentemente la excelencia en todos nuestros quehaceres y servicios.",
+    "values.secondS": "Al interior de nuestra organización prevalecen:",
     "values.thirdS":
       "Son nuestra impecable constante y se conjugan para obtener nuestro mejor producto al servicio de usted.",
     // Ingenieria
@@ -101,35 +110,44 @@ export const labels = {
     // Inicio
     "index.title": "Be Welcome",
     "index.firstP":
-      "In <strong>OMEGHA CONSTRUCTOR'S BUILDING Co. S.A.C.</strong> we distinguish ourselves by the quality of the workmanship and supplies used in each of our projects and services, which allows us to guarantee timely delivery and high-quality standards, at a fair price.",
+      "At <strong>OMEGHA CONSTRUCTOR'S BUILDING Co. S.A.C.</strong> we are proud to be synonymous with excellence, commitment and trust in the construction industry. Each project we develop reflects our solid experience, the technical rigor of our team and the superior quality of the materials we use.",
     "index.secondP":
-      "We also stand out for the constant search for new and innovative engineering and architectural design solutions, ecological and friendly to the environment, breaking all established standards.",
+      "Our commitment is to offer integral, safe and efficient construction solutions, guaranteeing on-time deliveries and results that exceed our clients' expectations. We work with high quality standards, taking care of every detail and offering an ideal balance between functionality, aesthetics and sustainability.",
+    "index.thirdP":
+      "We are driven by constant innovation. We seek to integrate the latest technologies in engineering and architectural design, with a responsible approach to the environment. We break paradigms, proposing cutting-edge solutions that contribute to sustainable development and the well-being of communities.",
+    "index.fourthP":
+      "<strong>OMEGHA CONSTRUCTOR'S BUILDING Co. S.A.C.</strong> not only builds buildings, but also long lasting relationships based on trust, transparency and excellence.",
     // Nosotros
     "about.title": "Our Company",
     "about.firstP":
-      "<strong>Omegha Constructor Building Co. S.A.C.</strong> is a company oriented to the development of architectural design projects, civil works, sanitation, and electromechanical, and construction services and real estate. In addition to design, consultancy and sale of furniture and office equipment.",
+      "<strong>Omegha Constructor's Building Co. S.A.C.</strong> is a company oriented to the construction sector, specialized in consulting and the execution of integral projects in all areas of engineering and architecture. Our field of action covers civil works, sanitation systems, electromechanical installations, bridge and road construction, as well as residential, commercial and real estate buildings.",
     "about.secondP":
-      "We are also dedicated to maintaining infrastructure, building maintenance management, legal consolidation of property, and provide solutions for e-Marketing and e-business.",
+      "We have a solid track record that supports our services in infrastructure maintenance, building maintenance management, real estate legal sanitation, and digital solutions applied to e-marketing and e-business, integrating technology and innovation in each project.",
+    "about.thirdP":
+      "We are committed to excellence, guaranteeing high quality results, punctual compliance with deadlines and strict respect for safety standards and environmental care. We work with professionalism, responsibility and a modern vision that allows us to face current challenges and contribute to sustainable development.",
     "mission.title": "Mission",
     "mission.des":
-      "Based on the needs of infrastructure and spaces and or production facilities, we offer providing engineering and or real estate of high quality through the continuous innovation in the design, a permanent search of new and better technologies, the improvement of construction processes and personalized service to our customers.",
+      "Specialize in the execution of high quality infrastructure projects, such as hospitals, shopping centers and high schools, bridges and highways, sanitation and sewage, power generation and transmission, providing engineering, technological and real estate solutions with a focus on constant innovation. Our commitment is to offer guarantees, security and trust to our clients, including the State, through efficient and environmentally friendly construction processes, always prioritizing sustainability and social welfare.",
     "vision.title": "Vision",
     "vision.des":
-      "As the largest consolidate solution engineering quality of construction in the middle of Peru, contributing to the development of the region by creating value with our works and projects.",
+      "To become the preferred option in the construction sector in the jungle and in Peru, standing out for our professionalism, respect for local communities and the environment, and for contributing to regional development with projects that generate value and well-being for the population.",
     "values.title": "Our Values",
     "values.des":
       "In Omegha Constructor's Building Co. S.A.C we start from two fundamental principles:",
-    "values.liF": "Respect for the environment in which it intervenes",
-    "values.liP": "Respect for the ethnic groups that inhabit the place",
+    "values.liF": "Respect for the environment in which we work",
+    "values.liP":
+      "Respect for the communities and cultures that inhabit the site.",
+    "values.liT":
+      "The confidence and security we offer with our professionalism and high quality standards.",
     "values.para":
-      "Our company develops projects friendly with nature, respecting their wealth, biodiversity, landscapes, microclimates and the productive activities of the Settlers locals.",
+      "We develop projects that are friendly to nature, microclimates and the productive activities of the communities, with the objective of contributing to the sustainable development and well-being of the region.",
     "values.firstI":
       "We respect in our projects, customs, folklore and cultural manifestations of the villager population.",
     "values.secondI":
       "It is in this way that our engineering solutions and constructive harmonize with the middle without damaging it or modify it considerably, and spur sustainable growth, orderly and permanent productive and economic activities of the population. Improving their quality of life, enhancing their productivity and generating value.",
     "values.firstS":
-      "We owe it to our product, and it commits us to permanently seek excellence in all our chores and services.",
-    "values.secondS": "Within our Organization:",
+      "We owe ourselves to our results, and they commit us to constantly strive for excellence in all our activities and services.",
+    "values.secondS": "Within our organization, they prevail:",
     "values.thirdS":
       "Are our impeccable constant and combine to give our best product to service you.",
     // Ingenieria
