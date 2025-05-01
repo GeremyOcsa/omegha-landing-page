@@ -1,15 +1,26 @@
+---
+//Idioma
+import type { languageList } from "src/i18n/ui";
+import { useTranslations } from "src/i18n/utils";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
+---
+
 <section class="mt-auto bg-gray-950 bg-opacity-85 text-white">
   <div
     class="mx-auto flex flex-col justify-evenly py-4 text-sm md:flex-row lg:max-w-5xl lg:text-base"
   >
     <div class="p-2">
-      <h2 class="container pl-5 font-bold uppercase">Ubíquenos en:</h2>
-      <p class="mt-2 pl-5 font-semibold">Oficina Tarapoto</p>
+      <h2 class="container pl-5 font-bold uppercase">
+        {t("contact.location")}
+      </h2>
+      <p class="mt-2 pl-5 font-semibold">{t("contact.tarapoto")}</p>
       <span class="flex flex-row items-center gap-2"
         ><img src="/footer/Imagen3.png" alt="Ubicacion" /> Jr. Tacna Nº 348, Barrio
         Huayco
       </span>
-      <p class="mt-2 pl-5 font-semibold">Oficina Lima</p>
+      <p class="mt-2 pl-5 font-semibold">{t("contact.lima")}</p>
       <span class="flex flex-row items-center gap-2"
         ><img src="/footer/Imagen3.png" alt="Ubicacion" /> Calle José Gonzáles N°
         668, Miraflores
@@ -17,7 +28,7 @@
     </div>
 
     <div class="p-2">
-      <h2 class="pl-5 font-bold uppercase">Escríbanos en:</h2>
+      <h2 class="pl-5 font-bold uppercase">{t("contact.write")}</h2>
       <span class="mt-2 flex flex-row items-center gap-2"
         ><img src="/footer/Imagen1.png" alt="WhatsApp" /> WhatsApp:
         <a
@@ -38,7 +49,7 @@
         </a>
       </span>
       <div class="mt-2">
-        <h2 class="pl-5 font-bold uppercase">Nuestra web:</h2>
+        <h2 class="pl-5 font-bold uppercase">{t("contact.web")}</h2>
         <span class="flex flex-row items-center gap-2"
           ><img src="/footer/Imagen4.png" alt="Ubicacion" />
           www.omeghaconstructor.com

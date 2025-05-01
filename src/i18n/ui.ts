@@ -98,6 +98,7 @@ export const labels = {
     "contact.tarapoto": "Oficina Tarapoto",
     "contact.lima": "Oficina Lima",
     "contact.web": "Nuestra web:",
+    // PreFooter
     // Footer
     "footer.description":
       "Omegha Constructor's Building Co. S.A.C <span class='block md:inline'>©2025 Todos los derechos reservados</span>",
