@@ -98,6 +98,9 @@ export const labels = {
     "contact.tarapoto": "Oficina Tarapoto",
     "contact.lima": "Oficina Lima",
     "contact.web": "Nuestra web:",
+    // Footer
+    "footer.description":
+      "Omegha Constructor's Building Co. S.A.C <span class='block md:inline'>©2025 Todos los derechos reservados</span>",
   },
   en: {
     //Nav
@@ -105,7 +108,7 @@ export const labels = {
     "nav.about": "About us",
     "nav.enginnering": "Engineering",
     "nav.projects": "Projects",
-    "nav.service": "Service",
+    "nav.service": "Services",
     "nav.contact": "Contact us",
     // Inicio
     "index.title": "Be Welcome",
@@ -192,5 +195,8 @@ export const labels = {
     "contact.tarapoto": "Tarapoto Office",
     "contact.lima": "Lima Office",
     "contact.web": "Our website:",
+    // Footer
+    "footer.description":
+      "Omegha Constructor's Building Co. S.A.C <span class='block md:inline'>©2025 All rights reserved</span>",
   },
 };

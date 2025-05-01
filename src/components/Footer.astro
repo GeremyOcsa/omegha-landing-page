@@ -1,15 +1,17 @@
 ---
-const year = new Date().getFullYear();
+// const year = new Date().getFullYear();
+//Idioma
+import type { languageList } from "src/i18n/ui";
+import { useTranslations } from "src/i18n/utils";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <footer class="mt-auto bg-gray-950 text-white">
   <div
     class="bg-fondo_footer bg-repeat-round py-2 text-center text-xs font-light text-white md:py-4 md:font-extralight lg:text-base"
   >
-    <p>
-      Omegha Constructor's Building Co. S.A.C <span class="block md:inline"
-        >©{year} Todos los derechos reservados</span
-      >
-    </p>
+    <p set:html={t("footer.description")} />
   </div>
 </footer>
